@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KOWO — Mentions légales"/>
+  <title>Mentions légales — KOWO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #1C3B2A; --green-mid: #2D6147; --green-lt: #EBF2ED;
+      --gold: #B8860B; --gold-lt: #FAF3E0; --mint: #7FFFC4;
+      --ink: #0F1410; --ink-2: #3A3E39; --muted: #7A8078;
+      --faint: #B8BDB6; --bg: #F5F3EF; --surface: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Jost", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(245,243,239,0.94); backdrop-filter: blur(16px);
+      padding: 0 48px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100; border-bottom: 0.5px solid rgba(0,0,0,0.07);
+    }
+    .nav-logo { font-size: 20px; font-weight: 700; color: var(--green); letter-spacing: 2px; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 400; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .hero-legal {
+      background: var(--green); padding: 100px 48px 56px;
+      margin-top: 64px;
+    }
+    .hero-legal-inner { max-width: 760px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(127,255,196,0.1); border: 1px solid rgba(127,255,196,0.2);
+      color: var(--mint); padding: 5px 14px; border-radius: 20px;
+      font-size: 11px; font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-legal h1 { font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -1.5px; color: white; margin-bottom: 10px; line-height: 1.1; }
+    .hero-legal-meta { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+    .content { max-width: 760px; margin: 0 auto; padding: 64px 48px 80px; }
+    .toc {
+      background: var(--surface); border: 0.5px solid rgba(0,0,0,0.08);
+      border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h3 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { font-size: 14px; color: var(--green-mid); margin-bottom: 8px; }
+    .toc a { color: var(--green-mid); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .section { margin-bottom: 48px; scroll-margin-top: 80px; }
+    .section h2 {
+      font-size: 20px; font-weight: 700; color: var(--ink);
+      margin-bottom: 16px; padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--green-lt);
+      display: flex; align-items: center; gap: 10px; letter-spacing: -.5px;
+    }
+    .section h2 .num {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--green); color: white;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section p { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul, .section ol { padding-left: 20px; margin-bottom: 14px; }
+    .section li { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 8px; font-weight: 300; }
+    .highlight {
+      background: var(--green-lt); border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: var(--green-mid); line-height: 1.7;
+    }
+    .highlight-gold {
+      background: var(--gold-lt); border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: #7A5C00; line-height: 1.7;
+    }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .data-table th { background: var(--green); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child { border-radius: 0 8px 0 0; }
+    .data-table td { padding: 10px 14px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: var(--ink-2); vertical-align: top; line-height: 1.6; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: var(--green-lt); }
+    .contact-box {
+      background: var(--green); border-radius: 16px; padding: 28px;
+      margin-top: 24px; text-align: center;
+    }
+    .contact-box p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 12px; font-weight: 300; }
+    .contact-box a {
+      display: inline-block; background: var(--mint); color: var(--green);
+      padding: 10px 24px; border-radius: 10px; font-size: 14px; font-weight: 600;
+      text-decoration: none; margin: 4px;
+    }
+    footer { background: var(--ink); padding: 32px 48px; }
+    .footer-inner { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-size: 18px; font-weight: 700; color: white; letter-spacing: 2px; }
+    .footer-logo span { color: var(--mint); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .footer-copy { max-width: 760px; margin: 16px auto 0; padding-top: 16px; border-top: 0.5px solid rgba(255,255,255,0.08); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; }
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .hero-legal { padding: 90px 20px 40px; }
+      .content { padding: 40px 20px 60px; }
+      footer { padding: 28px 20px; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">KO<span>WO</span></a>
+  <a class="nav-back" href="/">← Retour à l'accueil</a>
+</nav>
+
+<div class="hero-legal">
+  <div class="hero-legal-inner">
+    <div class="hero-tag">⚖️ Transparence</div>
+    <h1>Mentions légales</h1>
+    <div class="hero-legal-meta">Conformément à la loi n°2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section" id="s1">
+    <h2><span class="num">1</span> Éditeur de l'application et du site</h2>
+    <table class="data-table">
+      <tbody>
+        <tr><td><strong>Raison sociale</strong></td><td>YandaTech EI</td></tr>
+        <tr><td><strong>Forme juridique</strong></td><td>Entreprise individuelle (EI)</td></tr>
+        <tr><td><strong>Représentant légal</strong></td><td>Fayçal SALAMI</td></tr>
+        <tr><td><strong>Siège social</strong></td><td>Île-de-France, France</td></tr>
+        <tr><td><strong>Activité</strong></td><td>Développement et édition de logiciels — services numériques financiers</td></tr>
+        <tr><td><strong>Email</strong></td><td><a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a></td></tr>
+        <tr><td><strong>Site éditeur</strong></td><td><a href="https://yandatech.fr" style="color:var(--green-mid)" target="_blank">yandatech.fr</a></td></tr>
+        <tr><td><strong>Site produit</strong></td><td><a href="https://kowo.yandatech.fr" style="color:var(--green-mid)">kowo.yandatech.fr</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="s2">
+    <h2><span class="num">2</span> Hébergement du site web</h2>
+    <table class="data-table">
+      <tbody>
+        <tr><td><strong>Hébergeur du site</strong></td><td>À définir (OVH, Vercel ou équivalent)</td></tr>
+        <tr><td><strong>Hébergeur du backend</strong></td><td>Render Inc. — 525 Brannan St. Suite 300, San Francisco, CA 94107, USA</td></tr>
+        <tr><td><strong>Hébergeur de la base de données</strong></td><td>Supabase Inc. — serveurs Union Européenne (région EU West)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="s3">
+    <h2><span class="num">3</span> Application mobile KOWO</h2>
+    <table class="data-table">
+      <tbody>
+        <tr><td><strong>Nom de l'application</strong></td><td>KOWO</td></tr>
+        <tr><td><strong>Plateforme Android</strong></td><td>Disponible sur Google Play Store</td></tr>
+        <tr><td><strong>Plateforme iOS</strong></td><td>En cours de soumission sur l'App Store d'Apple</td></tr>
+        <tr><td><strong>Package Android</strong></td><td>com.kowo.app</td></tr>
+        <tr><td><strong>Développé avec</strong></td><td>React Native / Expo (frontend) · Node.js / Fastify / Prisma (backend)</td></tr>
+        <tr><td><strong>Version actuelle</strong></td><td>1.0.0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="s4">
+    <h2><span class="num">4</span> Prestataires et partenaires</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Prestataire</th><th>Service</th><th>Pays</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Twilio Inc.</strong></td><td>Envoi de SMS OTP (authentification)</td><td>États-Unis</td></tr>
+        <tr><td><strong>FedaPay / CinetPay</strong></td><td>Traitement des paiements Mobile Money</td><td>Afrique de l'Ouest</td></tr>
+        <tr><td><strong>Stripe Identity / ComplyCube</strong></td><td>Vérification d'identité (KYC)</td><td>UE / USA</td></tr>
+        <tr><td><strong>Supabase</strong></td><td>Base de données PostgreSQL hébergée</td><td>Union Européenne</td></tr>
+        <tr><td><strong>Render</strong></td><td>Hébergement serveur applicatif</td><td>États-Unis</td></tr>
+        <tr><td><strong>Expo / EAS</strong></td><td>Build et distribution de l'app mobile</td><td>États-Unis</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="s5">
+    <h2><span class="num">5</span> Propriété intellectuelle</h2>
+    <p>L'ensemble des éléments constituant l'application KOWO et le site kowo.yandatech.fr — notamment le code source, les designs, les graphismes, les typographies, les textes, les logos et le nom KOWO — sont la propriété exclusive de <strong>YandaTech EI</strong>.</p>
+    <p>Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de YandaTech EI.</p>
+    <p>Le nom <strong>KOWO</strong> est un nom de marque déposée par YandaTech EI. Toute utilisation sans autorisation constitue une contrefaçon susceptible de poursuites judiciaires.</p>
+  </div>
+
+  <div class="section" id="s6">
+    <h2><span class="num">6</span> Protection des données personnelles</h2>
+    <p>Le traitement des données personnelles des utilisateurs de KOWO est détaillé dans notre <a href="/legal/privacy" style="color:var(--green-mid)">Politique de Confidentialité</a>, conforme au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679).</p>
+    <p>Conformément à la loi Informatique et Libertés (loi n°78-17 du 6 janvier 1978 modifiée), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles.</p>
+    <p>Pour exercer ces droits : <a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a></p>
+    <p>En cas de réclamation non résolue : <a href="https://www.cnil.fr" style="color:var(--green-mid)" target="_blank">www.cnil.fr</a></p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2><span class="num">7</span> Limitation de responsabilité</h2>
+    <p>YandaTech EI s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur le site et l'application KOWO, et se réserve le droit de corriger le contenu à tout moment sans préavis.</p>
+    <p>YandaTech EI ne saurait être tenu responsable :</p>
+    <ul>
+      <li>Des inexactitudes ou omissions portant sur des informations disponibles sur le site</li>
+      <li>Des dommages résultant d'une intrusion frauduleuse d'un tiers</li>
+      <li>De tout dommage indirect lié à l'utilisation de l'application</li>
+      <li>Des décisions d'investissement prises sur la base des informations présentées</li>
+    </ul>
+    <div class="highlight-gold">KOWO est une plateforme d'intermédiation. Les informations financières présentées ne constituent pas des conseils en investissement. La simulation boursière est un outil pédagogique sans valeur financière réelle.</div>
+  </div>
+
+  <div class="section" id="s8">
+    <h2><span class="num">8</span> Droit applicable</h2>
+    <p>Le présent site et l'application KOWO sont soumis au <strong>droit français</strong>. En cas de litige, les tribunaux français sont seuls compétents.</p>
+    <p>Pour tout litige de consommation, vous pouvez recourir à la médiation conformément aux articles L.611-1 et suivants du Code de la consommation.</p>
+  </div>
+
+  <div class="section" id="s9">
+    <h2><span class="num">9</span> Contact</h2>
+    <div class="contact-box">
+      <p>Pour toute question d'ordre légal concernant KOWO ou YandaTech EI</p>
+      <a href="mailto:contact@yandatech.fr">contact@yandatech.fr</a>
+      <a href="https://yandatech.fr" target="_blank">yandatech.fr</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">KO<span>WO</span></div>
+    <div class="footer-links">
+      <a href="/legal/cgu">CGU</a>
+      <a href="/legal/privacy">Confidentialité</a>
+      <a href="/legal/mentions">Mentions légales</a>
+      <a href="/">Accueil</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 YandaTech EI · Tous droits réservés · kowo.yandatech.fr</div>
+</footer>
+
+</body>
+</html>

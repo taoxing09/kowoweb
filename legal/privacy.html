@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KOWO — Politique de Confidentialité et protection des données RGPD"/>
+  <title>Politique de Confidentialité — KOWO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #1C3B2A; --green-mid: #2D6147; --green-lt: #EBF2ED;
+      --gold: #B8860B; --gold-lt: #FAF3E0; --mint: #7FFFC4;
+      --ink: #0F1410; --ink-2: #3A3E39; --muted: #7A8078;
+      --faint: #B8BDB6; --bg: #F5F3EF; --surface: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Jost", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(245,243,239,0.94); backdrop-filter: blur(16px);
+      padding: 0 48px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100; border-bottom: 0.5px solid rgba(0,0,0,0.07);
+    }
+    .nav-logo { font-size: 20px; font-weight: 700; color: var(--green); letter-spacing: 2px; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 400; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .hero-legal {
+      background: var(--green); padding: 100px 48px 56px;
+      margin-top: 64px;
+    }
+    .hero-legal-inner { max-width: 760px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(127,255,196,0.1); border: 1px solid rgba(127,255,196,0.2);
+      color: var(--mint); padding: 5px 14px; border-radius: 20px;
+      font-size: 11px; font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-legal h1 { font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -1.5px; color: white; margin-bottom: 10px; line-height: 1.1; }
+    .hero-legal-meta { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+    .content { max-width: 760px; margin: 0 auto; padding: 64px 48px 80px; }
+    .toc {
+      background: var(--surface); border: 0.5px solid rgba(0,0,0,0.08);
+      border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h3 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { font-size: 14px; color: var(--green-mid); margin-bottom: 8px; }
+    .toc a { color: var(--green-mid); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .section { margin-bottom: 48px; scroll-margin-top: 80px; }
+    .section h2 {
+      font-size: 20px; font-weight: 700; color: var(--ink);
+      margin-bottom: 16px; padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--green-lt);
+      display: flex; align-items: center; gap: 10px; letter-spacing: -.5px;
+    }
+    .section h2 .num {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--green); color: white;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section p { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul, .section ol { padding-left: 20px; margin-bottom: 14px; }
+    .section li { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 8px; font-weight: 300; }
+    .highlight {
+      background: var(--green-lt); border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: var(--green-mid); line-height: 1.7;
+    }
+    .highlight-gold {
+      background: var(--gold-lt); border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: #7A5C00; line-height: 1.7;
+    }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .data-table th { background: var(--green); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child { border-radius: 0 8px 0 0; }
+    .data-table td { padding: 10px 14px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: var(--ink-2); vertical-align: top; line-height: 1.6; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: var(--green-lt); }
+    .contact-box {
+      background: var(--green); border-radius: 16px; padding: 28px;
+      margin-top: 24px; text-align: center;
+    }
+    .contact-box p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 12px; font-weight: 300; }
+    .contact-box a {
+      display: inline-block; background: var(--mint); color: var(--green);
+      padding: 10px 24px; border-radius: 10px; font-size: 14px; font-weight: 600;
+      text-decoration: none; margin: 4px;
+    }
+    footer { background: var(--ink); padding: 32px 48px; }
+    .footer-inner { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-size: 18px; font-weight: 700; color: white; letter-spacing: 2px; }
+    .footer-logo span { color: var(--mint); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .footer-copy { max-width: 760px; margin: 16px auto 0; padding-top: 16px; border-top: 0.5px solid rgba(255,255,255,0.08); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; }
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .hero-legal { padding: 90px 20px 40px; }
+      .content { padding: 40px 20px 60px; }
+      footer { padding: 28px 20px; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">KO<span>WO</span></a>
+  <a class="nav-back" href="/">← Retour à l'accueil</a>
+</nav>
+
+<div class="hero-legal">
+  <div class="hero-legal-inner">
+    <div class="hero-tag">🔒 Protection des données</div>
+    <h1>Politique de Confidentialité</h1>
+    <div class="hero-legal-meta">Version 1.0 &nbsp;·&nbsp; Mise à jour : 1er juin 2026 &nbsp;·&nbsp; Conforme RGPD</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="toc">
+    <h3>Sommaire</h3>
+    <ol>
+      <li><a href="#s1">Responsable du traitement</a></li>
+      <li><a href="#s2">Données collectées</a></li>
+      <li><a href="#s3">Finalités du traitement</a></li>
+      <li><a href="#s4">Base légale</a></li>
+      <li><a href="#s5">Partage des données</a></li>
+      <li><a href="#s6">Durée de conservation</a></li>
+      <li><a href="#s7">Vos droits</a></li>
+      <li><a href="#s8">Sécurité des données</a></li>
+      <li><a href="#s9">Cookies et traceurs</a></li>
+      <li><a href="#s10">Transferts internationaux</a></li>
+      <li><a href="#s11">Modifications</a></li>
+      <li><a href="#s12">Contact DPO</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="s1">
+    <h2><span class="num">1</span> Responsable du traitement</h2>
+    <p>Le responsable du traitement des données personnelles collectées via l'application KOWO est :</p>
+    <ul>
+      <li><strong>Entité :</strong> YandaTech EI (entreprise individuelle)</li>
+      <li><strong>Représentant :</strong> Fayçal SALAMI</li>
+      <li><strong>Siège :</strong> Île-de-France, France</li>
+      <li><strong>Contact DPO :</strong> <a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="s2">
+    <h2><span class="num">2</span> Données collectées</h2>
+    <p>Dans le cadre de l'utilisation de KOWO, nous collectons les catégories de données suivantes :</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Données</th>
+          <th>Caractère</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Identification</strong></td>
+          <td>Numéro de téléphone, nom complet, adresse e-mail</td>
+          <td>Obligatoire (téléphone), facultatif (reste)</td>
+        </tr>
+        <tr>
+          <td><strong>KYC / Identité</strong></td>
+          <td>Pièce d'identité, photo, nationalité, date de naissance</td>
+          <td>Obligatoire pour certaines fonctionnalités</td>
+        </tr>
+        <tr>
+          <td><strong>Financières</strong></td>
+          <td>Historique des transactions, contributions aux clubs, dons aux projets</td>
+          <td>Automatique lors de l'utilisation</td>
+        </tr>
+        <tr>
+          <td><strong>Techniques</strong></td>
+          <td>Adresse IP, type d'appareil, OS, version app, logs de connexion</td>
+          <td>Automatique</td>
+        </tr>
+        <tr>
+          <td><strong>Usage</strong></td>
+          <td>Fonctionnalités utilisées, clubs rejoints, projets consultés</td>
+          <td>Automatique</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="highlight">Nous ne collectons jamais les données de vos contacts téléphoniques ni votre localisation GPS.</div>
+  </div>
+
+  <div class="section" id="s3">
+    <h2><span class="num">3</span> Finalités du traitement</h2>
+    <p>Vos données sont traitées pour les finalités suivantes :</p>
+    <ul>
+      <li><strong>Fourniture des services :</strong> tontines, clubs, crowdfunding, simulation boursière</li>
+      <li><strong>Authentification :</strong> vérification de l'identité par OTP et JWT</li>
+      <li><strong>KYC :</strong> vérification d'identité réglementaire pour les fonctionnalités financières</li>
+      <li><strong>Traitement des paiements :</strong> initiation et suivi des transactions Mobile Money</li>
+      <li><strong>Prévention de la fraude :</strong> détection des comportements anormaux et lutte anti-blanchiment</li>
+      <li><strong>Amélioration du service :</strong> analyse des usages pour améliorer l'application</li>
+      <li><strong>Notifications :</strong> alertes sur les cotisations, votes, jalons et activités des clubs</li>
+      <li><strong>Obligations légales :</strong> respect des obligations comptables et réglementaires</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s4">
+    <h2><span class="num">4</span> Base légale</h2>
+    <p>Le traitement de vos données repose sur les bases légales suivantes au sens du RGPD :</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Traitement</th><th>Base légale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Fourniture des services KOWO</td><td>Exécution du contrat (CGU)</td></tr>
+        <tr><td>Vérification KYC</td><td>Obligation légale (LCB-FT)</td></tr>
+        <tr><td>Communications marketing</td><td>Consentement</td></tr>
+        <tr><td>Amélioration du service</td><td>Intérêt légitime</td></tr>
+        <tr><td>Prévention de la fraude</td><td>Intérêt légitime + obligation légale</td></tr>
+        <tr><td>Conservation des transactions</td><td>Obligation légale (10 ans)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="s5">
+    <h2><span class="num">5</span> Partage des données</h2>
+    <p>Vos données peuvent être partagées uniquement avec les partenaires suivants, dans la limite du nécessaire :</p>
+    <ul>
+      <li><strong>Partenaire KYC</strong> (Stripe Identity / ComplyCube) — vérification d'identité</li>
+      <li><strong>FedaPay / CinetPay</strong> — traitement des paiements Mobile Money</li>
+      <li><strong>Twilio</strong> — envoi des codes OTP par SMS</li>
+      <li><strong>Supabase</strong> — hébergement de la base de données (serveurs en Europe)</li>
+      <li><strong>Render</strong> — hébergement du serveur applicatif (États-Unis, couvert par clauses CCT)</li>
+    </ul>
+    <div class="highlight-gold">Nous ne vendons jamais vos données à des tiers à des fins commerciales ou publicitaires. KOWO est une application sans publicité.</div>
+  </div>
+
+  <div class="section" id="s6">
+    <h2><span class="num">6</span> Durée de conservation</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Type de données</th><th>Durée de conservation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Données de compte (profil, téléphone)</td><td>3 ans après la dernière connexion</td></tr>
+        <tr><td>Données financières et transactions</td><td>10 ans (obligation légale comptable)</td></tr>
+        <tr><td>Données KYC et documents d'identité</td><td>5 ans après fin de la relation commerciale</td></tr>
+        <tr><td>Logs techniques (IP, connexions)</td><td>12 mois</td></tr>
+        <tr><td>Données de simulation boursière</td><td>Durée du compte + 1 an</td></tr>
+      </tbody>
+    </table>
+    <p>À l'expiration de ces délais, vos données sont supprimées de manière sécurisée ou anonymisées.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2><span class="num">7</span> Vos droits</h2>
+    <p>Conformément au RGPD (articles 15 à 22), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir une copie de toutes vos données personnelles</li>
+      <li><strong>Droit de rectification</strong> — corriger des données inexactes ou incomplètes</li>
+      <li><strong>Droit à l'effacement</strong> — demander la suppression de vos données (sous réserve des obligations légales)</li>
+      <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré et lisible par machine</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer à certains traitements basés sur l'intérêt légitime</li>
+      <li><strong>Droit à la limitation</strong> — restreindre temporairement le traitement de vos données</li>
+      <li><strong>Droit de retirer le consentement</strong> — pour les traitements fondés sur le consentement</li>
+    </ul>
+    <div class="highlight">Pour exercer vos droits, contactez-nous à <a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a>. Nous répondrons dans un délai maximum de 30 jours.</div>
+    <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) : <a href="https://www.cnil.fr" style="color:var(--green-mid)" target="_blank">www.cnil.fr</a></p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2><span class="num">8</span> Sécurité des données</h2>
+    <p>YandaTech, en tant qu'entreprise fondée par un expert en cybersécurité, applique des mesures de sécurité rigoureuses :</p>
+    <ul>
+      <li>Chiffrement de toutes les communications en transit (HTTPS/TLS 1.3)</li>
+      <li>Authentification par JWT (JSON Web Token) avec expiration automatique</li>
+      <li>Hachage et salage des données sensibles en base</li>
+      <li>Accès restreint aux données de production (principe du moindre privilège)</li>
+      <li>Sauvegardes automatiques chiffrées de la base de données</li>
+      <li>Aucune donnée sensible stockée en clair sur l'appareil mobile</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s9">
+    <h2><span class="num">9</span> Cookies et traceurs</h2>
+    <p>L'application mobile KOWO n'utilise pas de cookies au sens traditionnel du terme.</p>
+    <p>Des <strong>tokens d'authentification JWT</strong> sont stockés localement sur votre appareil (via AsyncStorage) pour maintenir votre session. Ces tokens :</p>
+    <ul>
+      <li>Ne contiennent que votre identifiant utilisateur et numéro de téléphone chiffrés</li>
+      <li>Ne sont jamais partagés avec des tiers</li>
+      <li>Sont supprimés à la déconnexion</li>
+    </ul>
+    <p>Le site web kowo.yandatech.fr n'utilise pas de cookies de tracking ou de publicité.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2><span class="num">10</span> Transferts internationaux</h2>
+    <p>Certains de nos partenaires techniques peuvent traiter vos données en dehors de l'Union Européenne :</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Partenaire</th><th>Pays</th><th>Garanties</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Twilio</td><td>États-Unis</td><td>Clauses contractuelles types (CCT)</td></tr>
+        <tr><td>Render</td><td>États-Unis</td><td>Clauses contractuelles types (CCT)</td></tr>
+        <tr><td>Supabase</td><td>Union Européenne</td><td>RGPD applicable directement</td></tr>
+      </tbody>
+    </table>
+    <p>Ces transferts sont encadrés par les clauses contractuelles types approuvées par la Commission européenne, garantissant un niveau de protection équivalent au RGPD.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2><span class="num">11</span> Modifications</h2>
+    <p>Cette politique de confidentialité peut être mise à jour pour refléter les évolutions légales ou les changements de nos pratiques. Toute modification substantielle vous sera notifiée :</p>
+    <ul>
+      <li>Par une notification in-app</li>
+      <li>Par la mise à jour de la date en haut de ce document</li>
+    </ul>
+    <p>L'utilisation continue de KOWO après notification vaut acceptation de la politique mise à jour.</p>
+  </div>
+
+  <div class="section" id="s12">
+    <h2><span class="num">12</span> Contact</h2>
+    <p>Pour toute question relative à vos données personnelles, ou pour exercer vos droits RGPD :</p>
+    <div class="contact-box">
+      <p>Délégué à la Protection des Données — YandaTech EI<br/>Île-de-France, France</p>
+      <a href="mailto:contact@yandatech.fr">contact@yandatech.fr</a>
+      <a href="https://www.cnil.fr" target="_blank">Saisir la CNIL</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">KO<span>WO</span></div>
+    <div class="footer-links">
+      <a href="/legal/cgu">CGU</a>
+      <a href="/legal/privacy">Confidentialité</a>
+      <a href="/legal/mentions">Mentions légales</a>
+      <a href="/">Accueil</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 YandaTech EI · Tous droits réservés · kowo.yandatech.fr</div>
+</footer>
+
+</body>
+</html>
