@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KOWO — Conditions Générales d'Utilisation"/>
+  <title>CGU — KOWO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green: #1C3B2A; --green-mid: #2D6147; --green-lt: #EBF2ED;
+      --gold: #B8860B; --gold-lt: #FAF3E0; --mint: #7FFFC4;
+      --ink: #0F1410; --ink-2: #3A3E39; --muted: #7A8078;
+      --faint: #B8BDB6; --bg: #F5F3EF; --surface: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: "Jost", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(245,243,239,0.94); backdrop-filter: blur(16px);
+      padding: 0 48px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100; border-bottom: 0.5px solid rgba(0,0,0,0.07);
+    }
+    .nav-logo { font-size: 20px; font-weight: 700; color: var(--green); letter-spacing: 2px; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-back { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 400; display: flex; align-items: center; gap: 6px; transition: color .2s; }
+    .nav-back:hover { color: var(--green); }
+    .hero-legal {
+      background: var(--green); padding: 100px 48px 56px;
+      margin-top: 64px;
+    }
+    .hero-legal-inner { max-width: 760px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(127,255,196,0.1); border: 1px solid rgba(127,255,196,0.2);
+      color: var(--mint); padding: 5px 14px; border-radius: 20px;
+      font-size: 11px; font-weight: 500; letter-spacing: 1px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-legal h1 { font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -1.5px; color: white; margin-bottom: 10px; line-height: 1.1; }
+    .hero-legal-meta { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+    .content { max-width: 760px; margin: 0 auto; padding: 64px 48px 80px; }
+    .toc {
+      background: var(--surface); border: 0.5px solid rgba(0,0,0,0.08);
+      border-radius: 16px; padding: 24px 28px; margin-bottom: 48px;
+    }
+    .toc h3 { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; }
+    .toc li { font-size: 14px; color: var(--green-mid); margin-bottom: 8px; }
+    .toc a { color: var(--green-mid); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .section { margin-bottom: 48px; scroll-margin-top: 80px; }
+    .section h2 {
+      font-size: 20px; font-weight: 700; color: var(--ink);
+      margin-bottom: 16px; padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--green-lt);
+      display: flex; align-items: center; gap: 10px; letter-spacing: -.5px;
+    }
+    .section h2 .num {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--green); color: white;
+      font-size: 13px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section p { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 14px; font-weight: 300; }
+    .section p:last-child { margin-bottom: 0; }
+    .section ul, .section ol { padding-left: 20px; margin-bottom: 14px; }
+    .section li { font-size: 15px; color: var(--ink-2); line-height: 1.8; margin-bottom: 8px; font-weight: 300; }
+    .highlight {
+      background: var(--green-lt); border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: var(--green-mid); line-height: 1.7;
+    }
+    .highlight-gold {
+      background: var(--gold-lt); border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 16px 0;
+      font-size: 14px; color: #7A5C00; line-height: 1.7;
+    }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .data-table th { background: var(--green); color: white; padding: 10px 14px; text-align: left; font-weight: 500; font-size: 13px; }
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child { border-radius: 0 8px 0 0; }
+    .data-table td { padding: 10px 14px; border-bottom: 0.5px solid rgba(0,0,0,0.07); color: var(--ink-2); vertical-align: top; line-height: 1.6; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: var(--green-lt); }
+    .contact-box {
+      background: var(--green); border-radius: 16px; padding: 28px;
+      margin-top: 24px; text-align: center;
+    }
+    .contact-box p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 12px; font-weight: 300; }
+    .contact-box a {
+      display: inline-block; background: var(--mint); color: var(--green);
+      padding: 10px 24px; border-radius: 10px; font-size: 14px; font-weight: 600;
+      text-decoration: none; margin: 4px;
+    }
+    footer { background: var(--ink); padding: 32px 48px; }
+    .footer-inner { max-width: 760px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-logo { font-size: 18px; font-weight: 700; color: white; letter-spacing: 2px; }
+    .footer-logo span { color: var(--mint); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .footer-copy { max-width: 760px; margin: 16px auto 0; padding-top: 16px; border-top: 0.5px solid rgba(255,255,255,0.08); font-size: 11px; color: rgba(255,255,255,0.2); text-align: center; }
+    @media (max-width: 640px) {
+      nav { padding: 0 20px; }
+      .hero-legal { padding: 90px 20px 40px; }
+      .content { padding: 40px 20px 60px; }
+      footer { padding: 28px 20px; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">KO<span>WO</span></a>
+  <a class="nav-back" href="/">← Retour à l'accueil</a>
+</nav>
+
+<div class="hero-legal">
+  <div class="hero-legal-inner">
+    <div class="hero-tag">📄 Document légal</div>
+    <h1>Conditions Générales d'Utilisation</h1>
+    <div class="hero-legal-meta">Version 1.0 &nbsp;·&nbsp; Entrée en vigueur : 1er juin 2026 &nbsp;·&nbsp; YandaTech EI</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="toc">
+    <h3>Sommaire</h3>
+    <ol>
+      <li><a href="#s1">Présentation de KOWO</a></li>
+      <li><a href="#s2">Acceptation des conditions</a></li>
+      <li><a href="#s3">Accès et inscription</a></li>
+      <li><a href="#s4">Services proposés</a></li>
+      <li><a href="#s5">Tontines numériques</a></li>
+      <li><a href="#s6">Clubs d'investissement</a></li>
+      <li><a href="#s7">Crowdfunding de projets</a></li>
+      <li><a href="#s8">Simulation boursière</a></li>
+      <li><a href="#s9">Paiements et transactions</a></li>
+      <li><a href="#s10">Vérification d'identité (KYC)</a></li>
+      <li><a href="#s11">Obligations de l'utilisateur</a></li>
+      <li><a href="#s12">Responsabilités</a></li>
+      <li><a href="#s13">Propriété intellectuelle</a></li>
+      <li><a href="#s14">Protection des données</a></li>
+      <li><a href="#s15">Résiliation</a></li>
+      <li><a href="#s16">Droit applicable et litiges</a></li>
+      <li><a href="#s17">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="section" id="s1">
+    <h2><span class="num">1</span> Présentation de KOWO</h2>
+    <p>KOWO est une application mobile d'épargne et d'investissement collectif panafricain éditée par <strong>YandaTech EI</strong>, entreprise individuelle enregistrée en France (Île-de-France), représentée par Fayçal SALAMI, expert en cybersécurité.</p>
+    <p>KOWO permet à ses utilisateurs de participer à des tontines numériques, des clubs d'investissement collectif, de soutenir des projets d'entrepreneurs africains via le crowdfunding, et de s'initier aux marchés financiers africains via une simulation boursière pédagogique.</p>
+    <p>Contact : <a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a> &nbsp;·&nbsp; Site : <a href="https://kowo.yandatech.fr" style="color:var(--green-mid)">kowo.yandatech.fr</a></p>
+  </div>
+
+  <div class="section" id="s2">
+    <h2><span class="num">2</span> Acceptation des conditions</h2>
+    <p>L'utilisation de l'application KOWO implique l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, vous ne devez pas utiliser l'application.</p>
+    <div class="highlight">YandaTech se réserve le droit de modifier ces CGU à tout moment. Les modifications prennent effet dès leur publication dans l'application. L'utilisateur en sera notifié par une alerte in-app.</div>
+    <p>L'utilisation continue de l'application après modification des CGU vaut acceptation des nouvelles conditions.</p>
+  </div>
+
+  <div class="section" id="s3">
+    <h2><span class="num">3</span> Accès et inscription</h2>
+    <p>L'accès à KOWO est réservé aux personnes physiques majeures (18 ans et plus). L'inscription se fait via un numéro de téléphone mobile valide et un code OTP (One-Time Password) envoyé par SMS.</p>
+    <p>L'utilisateur est seul responsable :</p>
+    <ul>
+      <li>De la confidentialité de son accès (token de session)</li>
+      <li>De toutes les actions réalisées depuis son compte</li>
+      <li>De l'exactitude des informations fournies lors de l'inscription</li>
+      <li>De la sécurité de son appareil mobile</li>
+    </ul>
+    <p>En cas de suspicion d'accès non autorisé, l'utilisateur doit immédiatement contacter KOWO à l'adresse contact@yandatech.fr.</p>
+  </div>
+
+  <div class="section" id="s4">
+    <h2><span class="num">4</span> Services proposés</h2>
+    <p>KOWO propose quatre services principaux, détaillés dans les articles suivants :</p>
+    <ul>
+      <li><strong>Tontine numérique</strong> — système de cotisation mensuelle rotative</li>
+      <li><strong>Club d'investissement collectif</strong> — investissement groupé dans un projet commun</li>
+      <li><strong>Crowdfunding de projets</strong> — financement participatif avec jalons</li>
+      <li><strong>Simulation boursière</strong> — outil pédagogique sans valeur réelle</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s5">
+    <h2><span class="num">5</span> Tontines numériques</h2>
+    <p>La tontine numérique est un système d'épargne collective rotatif. Chaque mois, un membre reçoit le pot collectif constitué des cotisations de tous les membres du groupe.</p>
+    <ul>
+      <li>Une <strong>caution équivalente à une mensualité</strong> est prélevée à l'entrée de chaque membre et bloquée chez KOWO pour protéger le groupe contre les défaillances</li>
+      <li>La caution est restituée au membre en fin de cycle, déduction faite des éventuels impayés</li>
+      <li>L'ordre de rotation est voté par les membres du groupe via l'application</li>
+      <li>KOWO agit en tant qu'intermédiaire technique et séquestre — non en tant qu'établissement de paiement agréé</li>
+    </ul>
+    <div class="highlight-gold">En cas de défaillance d'un membre, la caution de ce membre sera utilisée pour compenser le manque. KOWO ne garantit pas les contributions des membres tiers.</div>
+  </div>
+
+  <div class="section" id="s6">
+    <h2><span class="num">6</span> Clubs d'investissement</h2>
+    <p>Le club d'investissement collectif permet à plusieurs membres de cotiser ensemble pour financer un projet commun (immobilier, agriculture, commerce, etc.).</p>
+    <ul>
+      <li>Les parts de chaque membre sont <strong>proportionnelles à leurs contributions totales</strong></li>
+      <li>Les contributions peuvent être mensuelles ou libres selon la configuration du club</li>
+      <li>Le créateur du club en est l'administrateur et est responsable de la bonne gestion</li>
+      <li>Les votes collectifs sont réalisés via l'application et sont non contraignants d'un point de vue légal</li>
+    </ul>
+    <p>KOWO n'est pas responsable des décisions d'investissement prises par les clubs, ni des pertes éventuelles liées à ces décisions.</p>
+  </div>
+
+  <div class="section" id="s7">
+    <h2><span class="num">7</span> Crowdfunding de projets</h2>
+    <p>La fonctionnalité de crowdfunding permet aux porteurs de projets de collecter des fonds auprès de la communauté KOWO.</p>
+    <ul>
+      <li>Les fonds sont débloqués par <strong>jalons successifs</strong>, validés par vote des donateurs</li>
+      <li>KOWO perçoit une <strong>commission de 3%</strong> sur chaque jalon validé et décaissé</li>
+      <li>Un jalon ne peut être soumis que si les jalons précédents ont été validés</li>
+      <li>Les fonds non décaissés en cas d'échec du projet sont remboursés aux donateurs déduction faite des frais de traitement</li>
+    </ul>
+    <div class="highlight">La vérification KYC est obligatoire pour créer un projet de crowdfunding. Les porteurs de projets s'engagent sur l'honneur à utiliser les fonds conformément à la description publiée.</div>
+    <p>KOWO n'est pas responsable de la non-réalisation des projets ni du comportement des porteurs de projets.</p>
+  </div>
+
+  <div class="section" id="s8">
+    <h2><span class="num">8</span> Simulation boursière</h2>
+    <p>La simulation boursière est un <strong>outil pédagogique sans valeur financière réelle</strong>. Elle permet aux utilisateurs de s'initier aux marchés financiers africains (BRVM, NGX) avec un capital virtuel de 1 000 000 FCFA.</p>
+    <ul>
+      <li>Les opérations de simulation n'engagent aucun fonds réels</li>
+      <li>Les performances en simulation ne préjugent pas des performances sur les marchés réels</li>
+      <li>Le capital virtuel peut être réinitialisé à tout moment</li>
+    </ul>
+    <div class="highlight-gold">La simulation n'est pas une prestation de conseil en investissement. Les cours affichés sont indicatifs et peuvent avoir un décalage par rapport aux cours réels.</div>
+  </div>
+
+  <div class="section" id="s9">
+    <h2><span class="num">9</span> Paiements et transactions</h2>
+    <p>Les paiements sur KOWO sont traités par des prestataires de services de paiement tiers (FedaPay, CinetPay ou équivalent selon disponibilité). En effectuant un paiement, vous acceptez également les conditions générales du prestataire concerné.</p>
+    <ul>
+      <li>Modes de paiement acceptés : Wave, Orange Money, MTN Mobile Money</li>
+      <li>Montants par transaction : de 1 000 FCFA à 500 000 FCFA</li>
+      <li>Les transactions sont enregistrées et traçables dans l'application</li>
+      <li>Tout paiement validé est définitif, sauf dispositions contraires prévues par ces CGU</li>
+    </ul>
+    <p>KOWO se réserve le droit de suspendre un compte en cas de suspicion de fraude ou de blanchiment d'argent.</p>
+  </div>
+
+  <div class="section" id="s10">
+    <h2><span class="num">10</span> Vérification d'identité (KYC)</h2>
+    <p>La vérification d'identité est requise pour accéder à certaines fonctionnalités (création de projet, ordres boursiers réels). Elle est réalisée via notre partenaire KYC.</p>
+    <p>L'utilisateur s'engage à :</p>
+    <ul>
+      <li>Fournir des informations exactes et des documents authentiques</li>
+      <li>Ne pas usurper l'identité d'un tiers</li>
+      <li>Mettre à jour ses informations en cas de changement de situation</li>
+    </ul>
+    <p>Toute tentative de fraude documentaire entraînera la suspension définitive du compte et pourra faire l'objet d'un signalement aux autorités compétentes.</p>
+  </div>
+
+  <div class="section" id="s11">
+    <h2><span class="num">11</span> Obligations de l'utilisateur</h2>
+    <p>L'utilisateur s'engage à utiliser KOWO de manière loyale et conformément à la loi. Sont strictement interdits :</p>
+    <ul>
+      <li>L'utilisation de l'application à des fins de blanchiment d'argent ou de financement du terrorisme</li>
+      <li>La création de comptes multiples pour contourner des restrictions</li>
+      <li>Toute tentative de piratage, d'injection de code malveillant ou d'accès non autorisé</li>
+      <li>La diffusion de contenus illicites, diffamatoires ou trompeurs sur les projets de crowdfunding</li>
+      <li>L'usurpation d'identité d'un autre utilisateur ou d'un tiers</li>
+    </ul>
+  </div>
+
+  <div class="section" id="s12">
+    <h2><span class="num">12</span> Responsabilités</h2>
+    <p>KOWO est une plateforme d'intermédiation technique. YandaTech n'est pas responsable :</p>
+    <ul>
+      <li>Des pertes financières liées aux investissements ou contributions réalisés via l'application</li>
+      <li>Du comportement des membres d'un club ou tontine</li>
+      <li>De la non-réalisation des projets de crowdfunding</li>
+      <li>Des interruptions de service dues à des facteurs externes (panne réseau, maintenance, force majeure)</li>
+      <li>Des fluctuations des cours boursiers affichés dans l'application</li>
+    </ul>
+    <p>La responsabilité de YandaTech ne pourra être engagée qu'en cas de faute prouvée dans la fourniture du service technique.</p>
+  </div>
+
+  <div class="section" id="s13">
+    <h2><span class="num">13</span> Propriété intellectuelle</h2>
+    <p>L'application KOWO, son code source, ses designs, marques, logos, noms de domaine et contenus sont la propriété exclusive de YandaTech EI.</p>
+    <p>Toute reproduction, distribution, modification ou utilisation commerciale non autorisée est strictement interdite et constitue une contrefaçon susceptible de poursuites judiciaires.</p>
+  </div>
+
+  <div class="section" id="s14">
+    <h2><span class="num">14</span> Protection des données</h2>
+    <p>Le traitement de vos données personnelles est régi par notre <a href="/legal/privacy" style="color:var(--green-mid)">Politique de Confidentialité</a>, accessible depuis les paramètres de l'application et ce site.</p>
+    <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement et de portabilité de vos données. Pour exercer ces droits : <a href="mailto:contact@yandatech.fr" style="color:var(--green-mid)">contact@yandatech.fr</a></p>
+  </div>
+
+  <div class="section" id="s15">
+    <h2><span class="num">15</span> Résiliation</h2>
+    <p>L'utilisateur peut clôturer son compte à tout moment depuis les paramètres de l'application. La clôture entraîne :</p>
+    <ul>
+      <li>La suppression des données personnelles dans les délais légaux</li>
+      <li>Le remboursement des fonds disponibles (hors engagements en cours dans les clubs et tontines)</li>
+      <li>La conservation des données de transactions pendant 10 ans (obligation légale)</li>
+    </ul>
+    <p>YandaTech se réserve le droit de suspendre ou résilier un compte sans préavis en cas de violation des présentes CGU.</p>
+  </div>
+
+  <div class="section" id="s16">
+    <h2><span class="num">16</span> Droit applicable et litiges</h2>
+    <p>Les présentes CGU sont soumises au <strong>droit français</strong>. En cas de litige, une solution amiable sera recherchée en priorité.</p>
+    <p>À défaut, tout litige relatif à l'interprétation ou à l'exécution des présentes CGU relève de la compétence exclusive des tribunaux français compétents.</p>
+    <p>Conformément aux articles L.611-1 et suivants du Code de la consommation, vous pouvez recourir à la médiation de la consommation.</p>
+  </div>
+
+  <div class="section" id="s17">
+    <h2><span class="num">17</span> Contact</h2>
+    <p>Pour toute question relative aux présentes CGU :</p>
+    <div class="contact-box">
+      <p>Nous sommes disponibles pour répondre à toutes vos questions légales</p>
+      <a href="mailto:contact@yandatech.fr">contact@yandatech.fr</a>
+      <a href="https://kowo.yandatech.fr">kowo.yandatech.fr</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">KO<span>WO</span></div>
+    <div class="footer-links">
+      <a href="/legal/cgu">CGU</a>
+      <a href="/legal/privacy">Confidentialité</a>
+      <a href="/legal/mentions">Mentions légales</a>
+      <a href="/">Accueil</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 YandaTech EI · Tous droits réservés · kowo.yandatech.fr</div>
+</footer>
+
+</body>
+</html>
