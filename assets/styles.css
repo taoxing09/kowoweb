@@ -106,110 +106,118 @@ body.menu-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-4
 @media(max-width:380px){.phone-v5{width:min(282px,78vw);height:556px}.app-wordmark{font-size:35px}.app-sheet h3{font-size:22px}.app-sheet{padding-left:19px;padding-right:19px}.sheet-btn{height:47px}.app-sheet .chip{padding:7px 11px}}
 
 /* ─────────────────────────────────────────────
-   KOWO V5.3 — Hero phone sharpness patch
-   Objectif : supprimer le léger flou perçu sur desktop/mobile.
-   Actions : retrait de la rotation finale, meilleure netteté typographique,
-   contraste renforcé dans l'écran applicatif, suppression des blur inutiles.
+   KOWO V5.4 — Aperçu téléphone net et lisible
+   Objectif : supprimer le flou lié aux rotations/scales CSS,
+   agrandir les textes internes et éviter que la carte blanche
+   masque les informations du haut de l'application.
 ───────────────────────────────────────────── */
-.phone-v5,
-.phone-v5 *{
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+.phone-scene-v5{
+  min-height:620px!important;
+  place-items:center!important;
+  overflow:visible!important;
 }
-
 .phone-v5{
-  transform: translate3d(0,0,0) !important;
-  animation: kowoFloatInSharp .55s cubic-bezier(.2,.8,.2,1) both !important;
-  will-change: opacity, transform;
+  width:360px!important;
+  height:690px!important;
+  max-width:86vw!important;
+  border-width:10px!important;
+  border-radius:52px!important;
+  transform:none!important;
+  animation:kowoPhoneCrispIn .45s cubic-bezier(.2,.8,.2,1) both!important;
+  backface-visibility:hidden!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:geometricPrecision!important;
+  image-rendering:auto!important;
 }
-
-@keyframes kowoFloatInSharp{
-  from{opacity:0;transform:translate3d(0,14px,0)}
-  to{opacity:1;transform:translate3d(0,0,0)}
+@keyframes kowoPhoneCrispIn{
+  from{opacity:0;translate:0 16px}
+  to{opacity:1;translate:0 0}
 }
-
 .screen-v5{
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
+  border-radius:40px!important;
+  padding:42px 25px 0!important;
+  background:linear-gradient(180deg,#123f2e 0%,#0d3023 50%,#f7f7f3 50%,#f7f7f3 100%)!important;
+  overflow:hidden!important;
+  -webkit-font-smoothing:antialiased!important;
+  text-rendering:geometricPrecision!important;
 }
-
-.app-saving-card{
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  background: rgba(255,255,255,.135) !important;
-  border-color: rgba(255,255,255,.22) !important;
+.screen-v5:before{inset:0 0 50%!important;opacity:.42!important}
+.phone-v5 *{text-shadow:none!important;filter:none!important;backface-visibility:hidden!important}
+.app-wordmark{
+  font-size:48px!important;
+  letter-spacing:10px!important;
+  margin-top:54px!important;
 }
-
 .app-baseline{
-  color: rgba(255,255,255,.82) !important;
-  font-weight: 500 !important;
+  max-width:270px!important;
+  font-size:14.5px!important;
+  line-height:1.45!important;
+  color:rgba(255,255,255,.82)!important;
+  margin:19px 0 14px!important;
+  font-weight:400!important;
 }
-
-.saving-head strong,
-.saving-amount{
-  color: rgba(255,255,255,.96) !important;
+.app-saving-card{
+  margin-top:10px!important;
+  padding:17px 18px 15px!important;
+  border-radius:23px!important;
+  backdrop-filter:none!important;
+  background:rgba(255,255,255,.13)!important;
 }
-
-.saving-caption{
-  color: rgba(255,255,255,.68) !important;
-}
-
+.saving-head{font-size:13px!important}.saving-head span{font-size:12px!important}.saving-amount{font-size:37px!important}.saving-caption{font-size:11.5px!important;color:rgba(255,255,255,.72)!important}.saving-progress{height:7px!important;margin-top:12px!important}
 .app-sheet{
-  box-shadow: 0 -18px 46px rgba(2,9,6,.16) !important;
+  top:52.5%!important;
+  bottom:auto!important;
+  height:47.5%!important;
+  border-radius:34px 34px 0 0!important;
+  padding:36px 27px 22px!important;
+  overflow:hidden!important;
+  box-shadow:0 -18px 48px rgba(2,9,6,.16)!important;
 }
-
 .app-sheet h3{
-  color:#101814 !important;
-  font-weight:800 !important;
+  font-size:28px!important;
+  line-height:1.12!important;
+  letter-spacing:-.5px!important;
+  margin-bottom:13px!important;
 }
-
 .app-sheet p{
-  color:#58625c !important;
-  font-weight:400 !important;
+  font-size:14px!important;
+  line-height:1.48!important;
+  color:#6a736c!important;
+  margin-bottom:13px!important;
 }
-
-.app-sheet .chip{
-  color:#123b2b !important;
-  background:#eaf8f0 !important;
-}
-
-.sheet-btn{
-  background:#083f2f !important;
-  color:#fff !important;
-}
-
-.phone-scene-v5 .float{
-  backdrop-filter:none !important;
-  -webkit-backdrop-filter:none !important;
-  background:rgba(255,255,255,.12) !important;
-}
-
-@media(min-width:901px){
-  .phone-scene-v5{min-height:600px}
-  .phone-v5{width:min(358px,82vw);height:690px}
-  .app-wordmark{font-size:49px;letter-spacing:11px}
-  .app-baseline{font-size:14.4px!important;line-height:1.5!important}
-  .app-sheet h3{font-size:28px}
-  .app-sheet p{font-size:13.8px!important;line-height:1.6!important}
-}
+.sheet-dots{margin:5px 0 13px!important}.app-sheet .chips{margin-bottom:14px!important}.app-sheet .chip{font-size:12px!important;padding:8px 13px!important}.sheet-btn{height:50px!important;font-size:15px!important;border-radius:15px!important}.sheet-login{font-size:12.5px!important;margin-top:11px!important}
+.phone-scene-v5 .f1{left:-14px!important;top:120px!important;transform:none!important}.phone-scene-v5 .f2{right:-10px!important;bottom:170px!important;transform:none!important}.phone-scene-v5 .float{backdrop-filter:none!important}
 
 @media(max-width:900px){
-  .phone-v5{transform:translate3d(0,0,0)!important;width:min(318px,80vw);height:622px}
-  .app-baseline{color:rgba(255,255,255,.84)!important}
+  .phone-scene-v5{min-height:570px!important;margin-top:8px!important}
+  .phone-v5{width:318px!important;height:610px!important;max-width:82vw!important;border-width:8px!important;border-radius:46px!important;transform:none!important}
+  .phone-v5:before{width:84px!important;height:22px!important}
+  .screen-v5{border-radius:36px!important;padding:37px 21px 0!important;background:linear-gradient(180deg,#123f2e 0%,#0d3023 49%,#f7f7f3 49%,#f7f7f3 100%)!important}
+  .screen-v5:before{inset:0 0 51%!important}
+  .app-lang{right:20px!important;top:35px!important}.app-lang span{height:30px!important;min-width:38px!important;font-size:11px!important}
+  .app-wordmark{font-size:41px!important;letter-spacing:8px!important;margin-top:49px!important}
+  .app-baseline{font-size:13.2px!important;line-height:1.42!important;max-width:242px!important;margin:17px 0 12px!important}
+  .app-saving-card{padding:14px 15px 13px!important;margin-top:7px!important;border-radius:21px!important}
+  .saving-head{font-size:12.2px!important}.saving-amount{font-size:32px!important}.saving-caption{font-size:10.3px!important}.saving-progress{height:6px!important;margin-top:10px!important}
+  .app-sheet{top:51.8%!important;height:48.2%!important;border-radius:30px 30px 0 0!important;padding:32px 22px 18px!important}
+  .app-sheet h3{font-size:24.5px!important;line-height:1.12!important;margin-bottom:10px!important}
+  .app-sheet p{font-size:13px!important;line-height:1.42!important;margin-bottom:10px!important}
+  .sheet-dots{margin:4px 0 11px!important}.app-sheet .chips{gap:8px!important;margin-bottom:12px!important}.app-sheet .chip{font-size:11.5px!important;padding:7px 11px!important}.sheet-btn{height:45px!important;font-size:14px!important}.sheet-login{font-size:11.5px!important;margin-top:9px!important}
+  .phone-scene-v5 .float{display:none!important}
 }
-
 @media(max-width:560px){
-  .phone-scene-v5{min-height:515px}
-  .phone-v5{width:min(304px,78vw);height:598px}
-  .app-wordmark{font-size:40px;letter-spacing:8px}
-  .app-baseline{font-size:12.9px!important;line-height:1.45!important;color:rgba(255,255,255,.84)!important}
-  .app-sheet h3{font-size:24.5px;letter-spacing:-.4px}
-  .app-sheet p{font-size:13px!important;line-height:1.56!important}
+  .hero{padding-bottom:22px!important}
+  .phone-scene-v5{min-height:525px!important;margin-top:6px!important}
+  .phone-v5{width:300px!important;height:575px!important;max-width:80vw!important}
+  .screen-v5{padding:34px 19px 0!important}
+  .app-wordmark{font-size:38px!important;letter-spacing:7.5px!important;margin-top:47px!important}
+  .app-baseline{font-size:12.7px!important;max-width:226px!important}
+  .saving-amount{font-size:30px!important}
+  .app-sheet{top:52%!important;height:48%!important;padding:30px 20px 17px!important}
+  .app-sheet h3{font-size:23px!important}.app-sheet p{font-size:12.3px!important}.sheet-btn{height:43px!important}.sheet-login{display:none!important}
 }
-
 @media(max-width:380px){
-  .phone-v5{width:min(288px,80vw);height:566px}
+  .phone-scene-v5{min-height:500px!important}
+  .phone-v5{width:282px!important;height:540px!important;max-width:82vw!important}
+  .screen-v5{padding:31px 17px 0!important}.app-wordmark{font-size:35px!important;letter-spacing:7px!important}.app-baseline{font-size:12px!important}.saving-amount{font-size:28px!important}.app-sheet{padding:28px 18px 15px!important}.app-sheet h3{font-size:21.5px!important}.app-sheet p{font-size:11.5px!important}.sheet-btn{height:41px!important}
 }
