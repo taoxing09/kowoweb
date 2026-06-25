@@ -104,3 +104,106 @@ body.menu-open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-4
 @media(max-width:900px){.phone-scene-v5{min-height:520px;margin-top:0}.phone-v5{width:min(312px,78vw);height:615px;border-width:9px;border-radius:48px;transform:rotate(1.5deg)}.phone-v5:before{width:84px;height:22px}.screen-v5{border-radius:37px;padding:38px 22px 0}.app-wordmark{font-size:42px;letter-spacing:9px;margin-top:48px}.app-baseline{font-size:13px!important;line-height:1.42!important;margin:18px 0 13px!important}.app-saving-card{padding:15px 16px 13px;border-radius:21px}.saving-amount{font-size:34px}.app-sheet{padding:34px 25px 22px}.app-sheet h3{font-size:25px}.sheet-btn{height:51px}.phone-scene-v5 .float{display:none!important}}
 @media(max-width:560px){.hero{padding-bottom:30px}.phone-scene-v5{min-height:520px;margin-top:2px}.phone-v5{width:min(300px,76vw);height:592px;border-width:8px;border-radius:44px;transform:rotate(0deg)}.screen-v5{border-radius:35px;padding:34px 20px 0}.app-lang{right:20px;top:34px}.app-lang span{height:30px;min-width:38px;font-size:11px}.app-wordmark{font-size:39px;letter-spacing:8px;margin-top:50px}.app-baseline{max-width:230px!important;font-size:12.5px!important}.app-saving-card{margin-top:8px;padding:14px 15px}.saving-amount{font-size:31px}.saving-caption{font-size:10px}.app-sheet{border-radius:30px 30px 0 0;padding:32px 22px 20px}.app-sheet h3{font-size:24px}.app-sheet p{font-size:12.8px!important}.sheet-btn{height:50px}.sheet-login{font-size:12px}}
 @media(max-width:380px){.phone-v5{width:min(282px,78vw);height:556px}.app-wordmark{font-size:35px}.app-sheet h3{font-size:22px}.app-sheet{padding-left:19px;padding-right:19px}.sheet-btn{height:47px}.app-sheet .chip{padding:7px 11px}}
+
+/* ─────────────────────────────────────────────
+   KOWO V5.1 — Hero phone refinement
+   Objectif : vraie interface plus lisible, carte blanche plus basse,
+   cartes flottantes non masquées sur desktop.
+───────────────────────────────────────────── */
+.phone-scene-v5{
+  min-height:620px;
+  padding-inline:24px;
+}
+.phone-v5{
+  width:min(340px,82vw);
+  height:672px;
+  overflow:hidden;
+}
+.screen-v5{
+  background:linear-gradient(180deg,#123f2e 0%,#0d3023 100%);
+  padding:42px 25px 0;
+}
+.screen-v5:before{inset:0;background-size:44px 44px;opacity:.52}
+.app-wordmark{margin-top:54px}
+.app-baseline{margin:20px 0 14px!important}
+.app-saving-card{
+  margin-top:8px;
+  padding:16px 18px 14px;
+  border-radius:23px;
+}
+.app-sheet{
+  top:372px;
+  bottom:auto;
+  min-height:300px;
+  padding:34px 27px 20px;
+  border-radius:32px 32px 0 0;
+}
+.app-sheet h3{font-size:25px;line-height:1.13;margin-bottom:12px}
+.app-sheet p{font-size:12.6px!important;line-height:1.48!important;margin-bottom:12px!important}
+.sheet-dots{margin:5px 0 13px}
+.app-sheet .chips{margin-bottom:16px}
+.sheet-btn{height:50px;border-radius:15px}
+.sheet-login{margin-top:10px;font-size:12px}
+.phone-scene-v5 .float{
+  z-index:5;
+  max-width:150px;
+  white-space:normal;
+}
+.phone-scene-v5 .f1{
+  left:-8px;
+  top:118px;
+  transform:none;
+}
+.phone-scene-v5 .f2{
+  right:-12px;
+  bottom:150px;
+  transform:none;
+}
+.phone-scene-v5 .float span{display:block;font-size:12px;line-height:1.28;color:rgba(255,255,255,.78)}
+
+@media(max-width:900px){
+  .phone-scene-v5{min-height:548px;padding-inline:0}
+  .phone-v5{width:min(306px,78vw);height:604px;transform:rotate(1deg)}
+  .screen-v5{padding:38px 22px 0;background:linear-gradient(180deg,#123f2e 0%,#0d3023 100%)}
+  .app-saving-card{padding:14px 16px 13px;margin-top:7px}
+  .app-sheet{top:336px;min-height:268px;padding:31px 24px 18px;border-radius:30px 30px 0 0}
+  .app-sheet h3{font-size:24px;margin-bottom:10px}
+  .app-sheet p{font-size:12.4px!important;line-height:1.45!important;margin-bottom:10px!important}
+  .sheet-dots{margin:4px 0 11px}
+  .app-sheet .chips{margin-bottom:13px;gap:8px}
+  .app-sheet .chip{padding:7px 11px;font-size:11px}
+  .sheet-btn{height:47px}
+}
+@media(max-width:560px){
+  .phone-scene-v5{min-height:512px;margin-top:2px}
+  .phone-v5{width:min(292px,74vw);height:574px;border-width:8px;border-radius:44px;transform:rotate(0deg)}
+  .phone-v5:before{width:78px;height:20px}
+  .screen-v5{border-radius:35px;padding:32px 19px 0}
+  .app-lang{right:18px;top:31px}
+  .app-wordmark{font-size:37px;letter-spacing:8px;margin-top:49px}
+  .app-baseline{max-width:230px!important;font-size:12px!important;line-height:1.42!important;margin:18px 0 10px!important}
+  .app-saving-card{margin-top:6px;padding:13px 14px 12px;border-radius:20px}
+  .saving-amount{font-size:30px;margin:8px 0 4px}
+  .saving-caption{font-size:9.8px}
+  .saving-progress{margin-top:10px;height:6px}
+  .app-sheet{top:315px;min-height:259px;border-radius:29px 29px 0 0;padding:29px 20px 16px}
+  .sheet-handle{top:12px;width:40px}
+  .app-sheet h3{font-size:22.5px;line-height:1.12;margin-bottom:10px}
+  .app-sheet p{font-size:12px!important;line-height:1.43!important;margin-bottom:10px!important}
+  .sheet-dots{margin:3px 0 10px}
+  .app-sheet .chips{gap:7px;margin-bottom:12px}
+  .app-sheet .chip{padding:7px 10px;font-size:10.5px}
+  .sheet-btn{height:45px;font-size:14px;border-radius:14px}
+  .sheet-login{font-size:11.3px;margin-top:8px}
+}
+@media(max-width:380px){
+  .phone-scene-v5{min-height:490px}
+  .phone-v5{width:min(274px,76vw);height:538px}
+  .screen-v5{padding-left:17px;padding-right:17px}
+  .app-wordmark{font-size:34px;letter-spacing:7px;margin-top:47px}
+  .app-baseline{font-size:11.5px!important;line-height:1.38!important}
+  .app-sheet{top:298px;min-height:240px;padding:27px 18px 14px}
+  .app-sheet h3{font-size:21px}
+  .app-sheet p{font-size:11.3px!important}
+  .sheet-btn{height:43px}
+}
