@@ -1,1 +1,1163 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>KOWO — Pitch Deck</title><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/styles.css"></head><body class="deck-body"><a class="brand" href="/" style="position:fixed;top:24px;left:28px;color:white;z-index:9"><span class="brand-mark">KO</span>KO<span>WO</span></a><div class="deck-wrap"><section class="slide dark-slide active"><div><span class="pill">Vision 2026</span><h1>KOWO</h1><p style="margin-top:22px">La plateforme panafricaine qui rend l’épargne collective simple, traçable et compatible avec les paiements mobiles.</p><div class="mini-grid"><div class="mini-box"><strong>01</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Pourquoi maintenant</span><h1>Le problème</h1><p style="margin-top:22px">L’épargne collective existe déjà, mais elle reste souvent informelle : peu de traçabilité, peu de preuves, peu de transparence, beaucoup de dépendance à WhatsApp et au cash.</p><div class="mini-grid"><div class="mini-box"><strong>02</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Produit</span><h1>La solution</h1><p style="margin-top:22px">KOWO digitalise l’organisation : création de groupes, règles, échéances, rotations, notifications, historique et reporting.</p><div class="mini-grid"><div class="mini-box"><strong>03</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide dark-slide"><div><span class="pill">Conformité</span><h1>Flux financiers</h1><p style="margin-top:22px">KOWO ne reçoit pas et ne détient pas les fonds. Les paiements sont exécutés via des partenaires agréés : FeexPay, Mobile Money, cartes, virements et demain PSP européens.</p><div class="mini-grid"><div class="mini-box"><strong>04</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Plateforme</span><h1>Modules</h1><p style="margin-top:22px">Épargne collective, projets collaboratifs, clubs d’investissement, simulation BRVM / NGX, éducation financière et reporting.</p><div class="mini-grid"><div class="mini-box"><strong>05</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Revenus</span><h1>Modèle économique</h1><p style="margin-top:22px">1% sur les tontines au lancement, 3% sur les clubs et projets, puis offres premium pour administrateurs, reporting avancé, export et services partenaires.</p><div class="mini-grid"><div class="mini-box"><strong>06</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide dark-slide"><div><span class="pill">Afrique + diaspora</span><h1>Marché</h1><p style="margin-top:22px">Afrique de l’Ouest d’abord, diaspora africaine ensuite. Un usage culturel déjà fort, porté par le mobile money et les transferts communautaires.</p><div class="mini-grid"><div class="mini-box"><strong>07</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Exécution</span><h1>Roadmap</h1><p style="margin-top:22px">MVP Android, intégration PSP Afrique, premiers groupes actifs, App Store, KYC, pilotes diaspora, puis partenariats SGI pour investissements réels.</p><div class="mini-grid"><div class="mini-box"><strong>08</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide "><div><span class="pill">Partenariats</span><h1>Ce que nous recherchons</h1><p style="margin-top:22px">Partenaires de paiement, SGI, incubateurs, mentors, investisseurs early-stage et communautés pilotes.</p><div class="mini-grid"><div class="mini-box"><strong>09</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section><section class="slide dark-slide"><div><span class="pill">Merci</span><h1>KOWO</h1><p style="margin-top:22px">Disponible sur Android · contact@getkowo.com · getkowo.com</p><div class="mini-grid"><div class="mini-box"><strong>10</strong><br><span>Slide</span></div><div class="mini-box"><strong>KOWO</strong><br><span>Afrique & diaspora</span></div></div></div></section></div><div class="deck-nav"><button onclick="prev()">←</button><span id="count">1 / 10</span><button onclick="next()">→</button></div><script>let i=0;const s=[...document.querySelectorAll('.slide')];function show(n){s[i].classList.remove('active');i=(n+s.length)%s.length;s[i].classList.add('active');document.getElementById('count').textContent=(i+1)+' / '+s.length}function next(){show(i+1)}function prev(){show(i-1)}document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();})</script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOWO — Pitch Deck 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green:       #1C3B2A;
+    --green-mid:   #2E5C42;
+    --green-light: #EBF5EF;
+    --gold:        #B8860B;
+    --gold-light:  #FFF8E1;
+    --white:       #FFFFFF;
+    --off:         #F7F9F7;
+    --ink:         #111C16;
+    --muted:       #6B7C72;
+    --faint:       #B8C4BC;
+    --up:          #16A34A;
+    --up-bg:       #DCFCE7;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: #0e1e16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ── NAVIGATION ─────────────────────────────────────────── */
+  .nav {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(28,59,42,0.85);
+    border: 1px solid rgba(184,134,11,0.3);
+    border-radius: 50px;
+    padding: 12px 28px;
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .nav button {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+  }
+  .nav button:hover { color: var(--gold); }
+
+  .nav-counter {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    min-width: 56px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .nav-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .nav-dot.active {
+    background: var(--gold);
+    width: 18px;
+    border-radius: 3px;
+  }
+
+  /* ── SLIDE WRAPPER ───────────────────────────────────────── */
+  .deck {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(60px);
+    transition: opacity 0.45s cubic-bezier(.4,0,.2,1), transform 0.45s cubic-bezier(.4,0,.2,1);
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateX(0);
+  }
+  .slide.exit {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  /* ── SLIDE INTERNE ───────────────────────────────────────── */
+  .s-inner {
+    width: min(900px, 92vw);
+    height: min(560px, 88vh);
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 40px 120px rgba(0,0,0,0.6);
+  }
+
+  /* ── SLIDE 1 — TITRE ─────────────────────────────────────── */
+  .s1 {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .s1::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.18) 0%, transparent 70%);
+  }
+  .s1::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.10) 0%, transparent 70%);
+  }
+  .s1-logo {
+    font-size: 72px;
+    font-weight: 300;
+    letter-spacing: 12px;
+    color: var(--white);
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-tagline {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-divider {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin: 0 auto 36px;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-sub {
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+  .s1-sub strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+  .s1-footer {
+    position: absolute;
+    bottom: 32px;
+    display: flex;
+    gap: 32px;
+    z-index: 1;
+  }
+  .s1-footer-item { text-align: center; }
+  .s1-footer-item span {
+    display: block;
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+  .s1-footer-item strong {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+  }
+
+  /* ── LAYOUT DEUX COLONNES ────────────────────────────────── */
+  .s-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  .s-left {
+    background: var(--green);
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .s-left::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.12) 0%, transparent 70%);
+  }
+  .s-right {
+    background: var(--white);
+    padding: 52px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .s-right-alt { background: var(--off); }
+
+  /* ── LAYOUT FULL VERT ────────────────────────────────────── */
+  .s-full-green {
+    background: var(--green);
+    padding: 52px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .s-full-green::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 380px; height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,134,11,0.15) 0%, transparent 70%);
+  }
+  .s-full-white {
+    background: var(--white);
+    padding: 52px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* ── TYPO ────────────────────────────────────────────────── */
+  .slide-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .slide-num-dark { color: rgba(255,255,255,0.3); }
+  .h1-white {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .h1-dark {
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+  .sub-white {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+  .sub-dark {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .gold-line {
+    width: 36px; height: 2px;
+    background: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  /* ── CARDS ───────────────────────────────────────────────── */
+  .card {
+    background: var(--green-light);
+    border-radius: 14px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--gold);
+  }
+  .card-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+  .card-body  { font-size: 12px; font-weight: 400; color: var(--muted); line-height: 1.6; }
+  .card-dark {
+    background: rgba(255,255,255,0.07);
+    border-radius: 14px;
+    padding: 18px 20px;
+    border-left: 3px solid var(--gold);
+    position: relative;
+    z-index: 1;
+  }
+  .card-dark .card-title { color: var(--white); }
+  .card-dark .card-body  { color: rgba(255,255,255,0.55); }
+
+  /* ── STAT BOXES ──────────────────────────────────────────── */
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat-box { background: var(--green-light); border-radius: 14px; padding: 20px; text-align: center; }
+  .stat-box-dark { background: rgba(255,255,255,0.08); border-radius: 14px; padding: 20px; text-align: center; position: relative; z-index: 1; }
+  .stat-val { font-size: 28px; font-weight: 300; color: var(--gold); letter-spacing: -1px; line-height: 1; margin-bottom: 6px; }
+  .stat-label { font-size: 11px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-label-white { color: rgba(255,255,255,0.5); }
+
+  /* ── FEATURE LIST ────────────────────────────────────────── */
+  .feat-list { display: flex; flex-direction: column; gap: 12px; }
+  .feat-row { display: flex; align-items: flex-start; gap: 14px; }
+  .feat-ico {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--green-light);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0;
+  }
+  .feat-ico-dark { background: rgba(255,255,255,0.1); }
+  .feat-text { flex: 1; }
+  .feat-title { font-size: 13px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+  .feat-title-white { color: var(--white); }
+  .feat-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .feat-desc-white { color: rgba(255,255,255,0.5); }
+
+  /* ── BADGE ───────────────────────────────────────────────── */
+  .badge { display: inline-block; background: var(--up-bg); color: var(--up); font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+  .badge-gold { background: var(--gold-light); color: var(--gold); }
+
+  /* ── PROGRESS BAR ────────────────────────────────────────── */
+  .progress-wrap { margin-bottom: 10px; }
+  .progress-label-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .progress-name { font-size: 12px; font-weight: 500; color: var(--ink); }
+  .progress-pct  { font-size: 12px; font-weight: 600; color: var(--gold); }
+  .progress-bar  { height: 6px; background: var(--green-light); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--green), var(--gold)); border-radius: 3px; }
+
+  /* ── TIMELINE ────────────────────────────────────────────── */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-row { display: flex; gap: 16px; align-items: flex-start; }
+  .tl-line-wrap { display: flex; flex-direction: column; align-items: center; width: 20px; flex-shrink: 0; }
+  .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 3px solid rgba(184,134,11,0.3); flex-shrink: 0; margin-top: 3px; }
+  .tl-dot-done { background: var(--up); border-color: rgba(22,163,74,0.3); }
+  .tl-connector { width: 2px; flex: 1; min-height: 24px; background: rgba(255,255,255,0.12); margin-top: 3px; }
+  .tl-content { padding-bottom: 18px; flex: 1; }
+  .tl-period { font-size: 11px; font-weight: 600; color: var(--gold); letter-spacing: 0.5px; margin-bottom: 3px; }
+  .tl-period-done { color: var(--up); }
+  .tl-desc { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+  /* ── MONEY BARS ──────────────────────────────────────────── */
+  .money-rows { display: flex; flex-direction: column; gap: 10px; }
+  .money-row { display: flex; align-items: center; gap: 12px; }
+  .money-bar-wrap { flex: 1; height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+  .money-bar { height: 100%; border-radius: 4px; }
+  .money-pct { font-size: 13px; font-weight: 600; color: var(--gold); width: 36px; text-align: right; flex-shrink: 0; }
+  .money-label { font-size: 12px; color: rgba(255,255,255,0.65); width: 220px; flex-shrink: 0; }
+
+  /* ── AVATAR ──────────────────────────────────────────────── */
+  .avatar { width: 72px; height: 72px; border-radius: 50%; background: rgba(184,134,11,0.15); border: 2px solid rgba(184,134,11,0.3); display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600; color: var(--gold); margin-bottom: 16px; }
+
+  /* ── TECH TAGS ───────────────────────────────────────────── */
+  .tags-wrap { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 5px 12px; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.7); }
+  .tag-gold { background: rgba(184,134,11,0.12); border-color: rgba(184,134,11,0.3); color: var(--gold); }
+
+  /* ── BIG NUMBER ──────────────────────────────────────────── */
+  .big-num { font-size: 64px; font-weight: 300; color: var(--gold); letter-spacing: -3px; line-height: 1; margin-bottom: 8px; }
+  .big-unit { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.5); margin-left: 4px; }
+
+  em { font-style: normal; color: var(--gold); }
+
+  /* ══════════════════════════════════════════════════════════
+     RESPONSIVE MOBILE — ajouté sans rien casser sur desktop
+     ══════════════════════════════════════════════════════════ */
+  @media (max-width: 640px) {
+
+    /* ── Corps : on autorise le scroll dans chaque slide ── */
+    body { overflow: hidden; }
+
+    /* ── Slide inner : prend presque tout l'écran, scrollable ── */
+    .s-inner {
+      width: 96vw;
+      height: 84vh;
+      border-radius: 16px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      /* scrollbar invisible */
+      scrollbar-width: none;
+    }
+    .s-inner::-webkit-scrollbar { display: none; }
+
+    /* ── Slide 1 — titre ── */
+    .s1 {
+      padding: 36px 22px 100px; /* bas généreux pour le footer absolu */
+      min-height: 100%;
+      justify-content: center;
+    }
+    .s1-logo    { font-size: 48px; letter-spacing: 8px; margin-bottom: 6px; }
+    .s1-tagline { font-size: 10px; letter-spacing: 2px; margin-bottom: 20px; }
+    .s1-divider { margin: 0 auto 20px; }
+    .s1-sub     { font-size: 15px; }
+    .s1-footer  {
+      position: static;
+      margin-top: 28px;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .s1-footer-item strong { font-size: 12px; }
+    .s1-footer-item span   { font-size: 9px; }
+
+    /* ── Split 2 colonnes → 1 colonne ── */
+    .s-split {
+      grid-template-columns: 1fr !important;
+      height: auto;
+      min-height: 100%;
+    }
+    .s-left {
+      padding: 28px 20px 20px;
+      min-height: auto;
+    }
+    .s-right {
+      padding: 24px 20px 28px;
+      gap: 10px;
+      min-height: auto;
+    }
+
+    /* ── Full vert / blanc ── */
+    .s-full-green {
+      padding: 28px 20px;
+      height: auto;
+      min-height: 100%;
+    }
+    .s-full-white {
+      padding: 28px 20px;
+      height: auto;
+      min-height: 100%;
+    }
+
+    /* ── Typo ── */
+    .h1-white { font-size: 22px; margin-bottom: 10px; }
+    .h1-dark  { font-size: 20px; margin-bottom: 10px; }
+    .sub-white, .sub-dark { font-size: 12px; line-height: 1.6; }
+    .slide-num { font-size: 10px; margin-bottom: 8px; }
+    .gold-line { margin-bottom: 12px; }
+
+    /* ── Features ── */
+    .feat-list { gap: 8px; }
+    .feat-title { font-size: 12px; }
+    .feat-desc  { font-size: 11px; }
+    .feat-ico   { width: 30px; height: 30px; font-size: 14px; border-radius: 8px; }
+
+    /* ── Cards ── */
+    .card, .card-dark { padding: 12px 14px; border-radius: 10px; }
+    .card-title { font-size: 12px; }
+    .card-body  { font-size: 11px; }
+
+    /* ── Slide 4 — grille 3 colonnes → 2 colonnes ── */
+    #s4 .s-full-green > div[style] {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 10px !important;
+    }
+    #s4 .card-dark { padding: 10px 12px; }
+    #s4 .card-dark > div:first-child { font-size: 18px; margin-bottom: 6px; }
+    #s4 .card-title { font-size: 11px; }
+    #s4 .card-body  { font-size: 10px; }
+
+    /* ── Slide 5 — stats 2×2 OK, texte réduit ── */
+    .stat-box-dark { padding: 12px 8px; border-radius: 10px; }
+    .stat-val       { font-size: 20px; }
+    .stat-label     { font-size: 9px; }
+
+    /* ── Slide 7 — roadmap, grille 2 col → 1 col ── */
+    #s7 .s-full-green > div[style] {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+    .tl-period { font-size: 10px; }
+    .tl-desc   { font-size: 10px; }
+    .tl-content { padding-bottom: 10px; }
+    .tl-connector { min-height: 14px; }
+
+    /* ── Slide 8 — tags ── */
+    .tag { font-size: 10px; padding: 4px 8px; border-radius: 6px; }
+
+    /* ── Slide 9 — équipe, grille 2 col → 1 col ── */
+    #s9 .s-full-green > div[style] {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    .avatar { width: 52px; height: 52px; font-size: 20px; margin-bottom: 10px; }
+    #s9 [style*="font-size:22px"] { font-size: 16px !important; }
+    #s9 [style*="font-size:13px;color:var(--gold)"] { font-size: 11px !important; }
+
+    /* ── Slide 10 — money bars ── */
+    .money-label { width: auto; flex: 1; font-size: 10px; }
+    .money-pct   { font-size: 11px; width: 28px; }
+    .big-num     { font-size: 40px; letter-spacing: -2px; }
+    .big-unit    { font-size: 15px; }
+
+    /* ── Stat grid ── */
+    .stat-box  { padding: 12px 8px; border-radius: 10px; }
+    .stat-grid { gap: 8px; }
+
+    /* ── Nav ── */
+    .nav {
+      padding: 10px 16px;
+      gap: 10px;
+      bottom: 16px;
+    }
+    .nav button    { font-size: 18px; }
+    .nav-counter   { font-size: 11px; min-width: 38px; }
+    .nav-dot       { width: 5px; height: 5px; }
+    .nav-dot.active { width: 14px; }
+  }
+
+  /* ── Très petit écran (< 380px) ── */
+  @media (max-width: 380px) {
+    .s1-logo { font-size: 38px; letter-spacing: 6px; }
+    .h1-white { font-size: 19px; }
+    .h1-dark  { font-size: 18px; }
+    .s-left, .s-right { padding: 20px 14px; }
+    .s-full-green, .s-full-white { padding: 20px 14px; }
+    #s4 .s-full-green > div[style] { grid-template-columns: 1fr !important; }
+    .big-num { font-size: 34px; }
+    .nav { padding: 8px 12px; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="deck">
+
+  <!-- ── SLIDE 1 — TITRE ────────────────────────────────────── -->
+  <div class="slide active" id="s1">
+    <div class="s-inner">
+      <div class="s1">
+        <div class="s1-logo">KOWO</div>
+        <div class="s1-tagline">Ramasse l'argent — en Yoruba</div>
+        <div class="s1-divider"></div>
+        <div class="s1-sub">
+          <strong>L'investissement collectif panafricain,</strong><br>
+          numérique et sécurisé
+        </div>
+        <div class="s1-footer">
+          <div class="s1-footer-item">
+            <strong>Fayçol SALAMI</strong>
+            <span>Fondateur & CEO</span>
+          </div>
+          <div class="s1-footer-item">
+            <strong>KOWO SARL</strong>
+            <span>Bénin · Afrique & diaspora</span>
+          </div>
+          <div class="s1-footer-item">
+            <strong>2026</strong>
+            <span>Amorçage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 2 — PROBLÈME ─────────────────────────────────── -->
+  <div class="slide" id="s2">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">02 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white">Un marché de <em>100 Mds$</em> sans solution digitale.</div>
+          <div class="sub-white">
+            La diaspora africaine envoie des milliards vers l'Afrique chaque année — mais les outils pour épargner et investir ensemble n'existent pas encore.
+          </div>
+        </div>
+        <div class="s-right">
+          <div class="slide-num">Le problème</div>
+          <div class="feat-list">
+            <div class="feat-row">
+              <div class="feat-ico">⚠️</div>
+              <div class="feat-text">
+                <div class="feat-title">Tontines non sécurisées</div>
+                <div class="feat-desc">La tontine traditionnelle repose sur la confiance orale — pas de traçabilité, aucune garantie en cas de défaillance.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">🌍</div>
+              <div class="feat-text">
+                <div class="feat-title">30 M de personnes ignorées</div>
+                <div class="feat-desc">La diaspora africaine en Europe n'a aucune app adaptée à ses modes d'épargne collectifs.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">💸</div>
+              <div class="feat-text">
+                <div class="feat-title">50 Mds$ brassés informellement</div>
+                <div class="feat-desc">Les tontines informelles représentent un marché immense, sans aucun acteur digital structuré.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">📵</div>
+              <div class="feat-text">
+                <div class="feat-title">Plateformes inadaptées</div>
+                <div class="feat-desc">Les fintechs existantes ignorent les pratiques d'épargne collective propres à la culture africaine.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 3 — SOLUTION ─────────────────────────────────── -->
+  <div class="slide" id="s3">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-right">
+          <div class="slide-num">La solution</div>
+          <div class="h1-dark">KOWO digitalise la tontine <em>et</em> bien plus.</div>
+          <div class="feat-list">
+            <div class="feat-row">
+              <div class="feat-ico">🤝</div>
+              <div class="feat-text">
+                <div class="feat-title">Tontine numérique</div>
+                <div class="feat-desc">Rotation automatique, caution sécurisée, vote de l'ordre de passage en groupe.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">💼</div>
+              <div class="feat-text">
+                <div class="feat-title">Clubs d'investissement</div>
+                <div class="feat-desc">Contributions collectives avec parts proportionnelles et transparence totale.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">🚀</div>
+              <div class="feat-text">
+                <div class="feat-title">Crowdfunding par jalons</div>
+                <div class="feat-desc">Fonds débloqués progressivement, validés par les donateurs à chaque étape.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">📈</div>
+              <div class="feat-text">
+                <div class="feat-title">Bourse africaine</div>
+                <div class="feat-desc">Données BRVM & NGX en temps réel, simulation sans risque pour apprendre.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">03 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white">Une app.<br>Tout l'écosystème<br>financier africain.</div>
+          <div class="sub-white" style="margin-bottom:28px;">
+            KYC intégré · Paiement Wave, Orange, MTN · Virement SEPA · Biométrie · Multidevise
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1;">
+            <span class="badge-gold badge">iOS & Android</span>
+            <span class="badge">Sumsub KYC</span>
+            <span class="badge-gold badge">FCFA & EUR</span>
+            <span class="badge">Mobile Money</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 4 — FONCTIONNALITÉS ──────────────────────────── -->
+  <div class="slide" id="s4">
+    <div class="s-inner">
+      <div class="s-full-green">
+        <div class="slide-num slide-num-dark">04 / 10</div>
+        <div class="gold-line"></div>
+        <div class="h1-white" style="margin-bottom:28px;">Fonctionnalités clés</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;position:relative;z-index:1;">
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">🤝</div>
+            <div class="card-title">Tontine digitale</div>
+            <div class="card-body">Rotation, caution, vote de l'ordre de passage, historique complet</div>
+          </div>
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">💼</div>
+            <div class="card-title">Clubs invest.</div>
+            <div class="card-body">Parts proportionnelles, cotisations mensuelles ou libres, goal tracker</div>
+          </div>
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">🚀</div>
+            <div class="card-title">Crowdfunding</div>
+            <div class="card-body">Jalons validés par donateurs, déblocage progressif des fonds</div>
+          </div>
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">📈</div>
+            <div class="card-title">BRVM & NGX</div>
+            <div class="card-body">Données en temps réel, simulation boursière pédagogique sans risque</div>
+          </div>
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">🔒</div>
+            <div class="card-title">Sécurité max</div>
+            <div class="card-body">KYC Sumsub, Face ID/empreinte, verrouillage auto 1 minute</div>
+          </div>
+          <div class="card-dark">
+            <div style="font-size:24px;margin-bottom:10px;">💸</div>
+            <div class="card-title">Multi-paiement</div>
+            <div class="card-body">Wave, Orange, MTN, Moov, SEPA — retraits EUR & FCFA libres</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 5 — MARCHÉ ───────────────────────────────────── -->
+  <div class="slide" id="s5">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">05 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white">Un marché<br>continental.</div>
+          <div class="sub-white" style="margin-bottom:28px;">
+            La diaspora africaine est l'une des communautés les plus actives dans l'envoi d'argent au monde — et la moins bien servie.
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:1;">
+            <div class="stat-box-dark">
+              <div class="stat-val">8M</div>
+              <div class="stat-label stat-label-white">diaspora Europe</div>
+            </div>
+            <div class="stat-box-dark">
+              <div class="stat-val">100$<span style="font-size:18px">Mds</span></div>
+              <div class="stat-label stat-label-white">transferts 2025</div>
+            </div>
+            <div class="stat-box-dark">
+              <div class="stat-val">50$<span style="font-size:18px">Mds</span></div>
+              <div class="stat-label stat-label-white">tontines informelles</div>
+            </div>
+            <div class="stat-box-dark">
+              <div class="stat-val">+35%</div>
+              <div class="stat-label stat-label-white">mobile money/an</div>
+            </div>
+          </div>
+        </div>
+        <div class="s-right">
+          <div class="slide-num">Marché cible</div>
+          <div class="h1-dark" style="font-size:24px;">Deux segments, une seule app.</div>
+          <div style="margin-bottom:8px;">
+            <div class="badge-gold badge" style="margin-bottom:10px;">Diaspora Africa Europe</div>
+            <div class="card" style="margin-bottom:12px;">
+              <div class="card-title">France · Belgique · Royaume-Uni</div>
+              <div class="card-body">8 millions de personnes actives, communautés béninoise, sénégalaise, ivoirienne, malienne, nigériane…</div>
+            </div>
+          </div>
+          <div>
+            <div class="badge badge" style="margin-bottom:10px;">Afrique de l'Ouest</div>
+            <div class="card">
+              <div class="card-title">Zone UEMOA + Nigeria</div>
+              <div class="card-body">150 millions d'actifs, pénétration mobile money en forte croissance, BRVM en modernisation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 6 — MODÈLE ÉCO ───────────────────────────────── -->
+  <div class="slide" id="s6">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-right">
+          <div class="slide-num">Modèle économique</div>
+          <div class="h1-dark">Revenus récurrents<br>à chaque transaction.</div>
+          <div class="feat-list">
+            <div class="feat-row">
+              <div class="feat-ico">💰</div>
+              <div class="feat-text">
+                <div class="feat-title">1% sur les retraits</div>
+                <div class="feat-desc">Chaque retrait de fonds (club, projet, tontine) génère une commission de 1%.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">🚀</div>
+              <div class="feat-text">
+                <div class="feat-title">3% sur le crowdfunding</div>
+                <div class="feat-desc">Commission sur chaque don validé — aligné sur les standards du secteur.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">🔒</div>
+              <div class="feat-text">
+                <div class="feat-title">Intérêts sur cautions</div>
+                <div class="feat-desc">Les cautions tontine bloquées génèrent des intérêts pendant la durée du cycle.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">⭐</div>
+              <div class="feat-text">
+                <div class="feat-title">Premium (roadmap)</div>
+                <div class="feat-desc">Alertes boursières, analyses BRVM avancées, accès prioritaire nouvelles fonctionnalités.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">06 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white">Objectif<br>Année 1.</div>
+          <div style="position:relative;z-index:1;margin-bottom:24px;">
+            <div class="big-num">5 000</div>
+            <div class="sub-white">utilisateurs actifs</div>
+          </div>
+          <div style="position:relative;z-index:1;">
+            <div class="big-num">200K<span class="big-unit">€</span></div>
+            <div class="sub-white">ARR cible</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 7 — TRACTION ─────────────────────────────────── -->
+  <div class="slide" id="s7">
+    <div class="s-inner">
+      <div class="s-full-green">
+        <div class="slide-num slide-num-dark">07 / 10</div>
+        <div class="gold-line"></div>
+        <div class="h1-white" style="margin-bottom:32px;">Traction & roadmap</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:1;">
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;">Déjà accompli ✅</div>
+            <div class="timeline">
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+                <div class="tl-content"><div class="tl-period tl-period-done">MVP complet</div><div class="tl-desc">React Native + Node.js + Supabase — fonctionnel en production</div></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+                <div class="tl-content"><div class="tl-period tl-period-done">KYC Sumsub prod.</div><div class="tl-desc">Vérification d'identité biométrique opérationnelle</div></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot tl-dot-done"></div><div class="tl-connector"></div></div>
+                <div class="tl-content"><div class="tl-period tl-period-done">Google Play Store</div><div class="tl-desc">Application soumise — test interne actif</div></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:11px;font-weight:600;letter-spacing:1.5px;color:rgba(255,255,255,0.3);text-transform:uppercase;margin-bottom:16px;">Roadmap 📅</div>
+            <div class="timeline">
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+                <div class="tl-content"><div class="tl-period">Q3 2026</div><div class="tl-desc">Beta fermée · 500 utilisateurs · Feexpay live</div></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot"></div><div class="tl-connector"></div></div>
+                <div class="tl-content"><div class="tl-period">Q1 2027</div><div class="tl-desc">iOS App Store · 5 000 utilisateurs actifs</div></div>
+              </div>
+              <div class="tl-row">
+                <div class="tl-line-wrap"><div class="tl-dot"></div></div>
+                <div class="tl-content"><div class="tl-period">Q2 2027</div><div class="tl-desc">Expansion Bénin, Sénégal, Côte d'Ivoire</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 8 — STACK TECH ───────────────────────────────── -->
+  <div class="slide" id="s8">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">08 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white" style="margin-bottom:24px;">Stack<br>technologique</div>
+          <div class="tags-wrap" style="position:relative;z-index:1;">
+            <span class="tag tag-gold">React Native</span>
+            <span class="tag tag-gold">Expo</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Fastify</span>
+            <span class="tag">Prisma</span>
+            <span class="tag tag-gold">Supabase</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag tag-gold">Sumsub KYC</span>
+            <span class="tag">Feexpay</span>
+            <span class="tag">JWT + Biométrie</span>
+            <span class="tag tag-gold">EAS Build</span>
+            <span class="tag">Render</span>
+            <span class="tag">GitHub CI</span>
+          </div>
+        </div>
+        <div class="s-right">
+          <div class="slide-num">Architecture</div>
+          <div class="h1-dark" style="font-size:22px;">Production-ready dès le premier jour.</div>
+          <div class="feat-list">
+            <div class="feat-row">
+              <div class="feat-ico">📱</div>
+              <div class="feat-text">
+                <div class="feat-title">Frontend</div>
+                <div class="feat-desc">React Native + Expo — iOS & Android depuis un seul codebase. Build EAS automatisé.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">⚙️</div>
+              <div class="feat-text">
+                <div class="feat-title">Backend</div>
+                <div class="feat-desc">Node.js + Fastify + Prisma sur Supabase PostgreSQL. Déployé sur Render avec anti-veille.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">🔐</div>
+              <div class="feat-text">
+                <div class="feat-title">Sécurité</div>
+                <div class="feat-desc">JWT + KYC biométrique Sumsub + RLS Supabase + verrouillage auto + Face ID.</div>
+              </div>
+            </div>
+            <div class="feat-row">
+              <div class="feat-ico">💳</div>
+              <div class="feat-text">
+                <div class="feat-title">Paiements</div>
+                <div class="feat-desc">Feexpay (Wave, Orange, MTN, Moov) + SEPA diaspora. Multi-devises FCFA & EUR.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 9 — ÉQUIPE ───────────────────────────────────── -->
+  <div class="slide" id="s9">
+    <div class="s-inner">
+      <div class="s-full-green">
+        <div class="slide-num slide-num-dark">09 / 10</div>
+        <div class="gold-line"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;position:relative;z-index:1;">
+          <div>
+            <div class="h1-white" style="margin-bottom:24px;">L'équipe</div>
+            <div class="avatar">FS</div>
+            <div style="font-size:22px;font-weight:600;color:var(--white);margin-bottom:4px;">Fayçol SALAMI</div>
+            <div style="font-size:13px;color:var(--gold);font-weight:500;margin-bottom:16px;">Fondateur & CEO · KOWO SARL</div>
+            <div class="sub-white" style="margin-bottom:20px;">
+              Consultant en cybersécurité avec <strong style="color:var(--white);">10+ ans d'expérience</strong> en architecture de systèmes d'information sécurisés. Expert en conformité et protection des données. Membre de la diaspora africaine avec une connaissance profonde des besoins de la communauté.
+            </div>
+            <div class="tags-wrap">
+              <span class="tag tag-gold">Cybersécurité</span>
+              <span class="tag">Architecture SI</span>
+              <span class="tag tag-gold">Diaspora</span>
+              <span class="tag">RGPD</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <div class="card-dark">
+              <div class="card-title">Nous recrutons</div>
+              <div class="card-body" style="margin-top:8px;">
+                <div style="margin-bottom:6px;">🧑‍💻 <strong style="color:rgba(255,255,255,0.7)">Lead Developer Mobile</strong> — React Native / TypeScript</div>
+                <div style="margin-bottom:6px;">🌍 <strong style="color:rgba(255,255,255,0.7)">Business Developer</strong> — Afrique de l'Ouest</div>
+                <div>💰 <strong style="color:rgba(255,255,255,0.7)">Partenariat SGI</strong> — Accès BRVM production</div>
+              </div>
+            </div>
+            <div class="card-dark">
+              <div class="card-title">Contact</div>
+              <div class="card-body" style="margin-top:8px;">
+                <div style="margin-bottom:4px;">📧 faycol.salami@yandatech.fr</div>
+                <div>🌐 getkowo.com</div>
+              </div>
+            </div>
+            <div class="card-dark" style="border-left-color:var(--up);">
+              <div class="card-title" style="color:var(--up);">Avantage fondateur</div>
+              <div class="card-body">Double expertise technique (cybersécurité) + connaissance terrain (diaspora africaine) — une combinaison rare dans ce secteur.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 10 — LEVÉE ───────────────────────────────────── -->
+  <div class="slide" id="s10">
+    <div class="s-inner">
+      <div class="s-split">
+        <div class="s-left">
+          <div class="slide-num slide-num-dark">10 / 10</div>
+          <div class="gold-line"></div>
+          <div class="h1-white" style="margin-bottom:8px;">Levée de fonds</div>
+          <div class="big-num" style="margin-bottom:4px;">150K<span class="big-unit">€</span></div>
+          <div class="sub-white" style="margin-bottom:28px;">Amorçage · 2026</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.4);position:relative;z-index:1;margin-bottom:16px;">UTILISATION DES FONDS</div>
+          <div class="money-rows">
+            <div class="money-row">
+              <div class="money-label">Développement produit & engineering</div>
+              <div class="money-bar-wrap"><div class="money-bar" style="width:40%;background:var(--gold);"></div></div>
+              <div class="money-pct">40%</div>
+            </div>
+            <div class="money-row">
+              <div class="money-label">Acquisition & marketing diaspora</div>
+              <div class="money-bar-wrap"><div class="money-bar" style="width:25%;background:var(--green-mid);"></div></div>
+              <div class="money-pct">25%</div>
+            </div>
+            <div class="money-row">
+              <div class="money-label">Conformité réglementaire & licences</div>
+              <div class="money-bar-wrap"><div class="money-bar" style="width:20%;background:rgba(184,134,11,0.6);"></div></div>
+              <div class="money-pct">20%</div>
+            </div>
+            <div class="money-row">
+              <div class="money-label">Opérations & infrastructure</div>
+              <div class="money-bar-wrap"><div class="money-bar" style="width:15%;background:rgba(255,255,255,0.25);"></div></div>
+              <div class="money-pct">15%</div>
+            </div>
+          </div>
+        </div>
+        <div class="s-right">
+          <div class="slide-num">Rejoignez l'aventure</div>
+          <div class="h1-dark" style="font-size:24px;">Rentabilité opérationnelle à <em>18 mois</em>.</div>
+          <div class="card" style="margin-bottom:14px;">
+            <div class="card-title">Ce que vous financez</div>
+            <div class="card-body">Un MVP fonctionnel déjà sur Google Play, une stack production-ready, un fondateur technique aux racines africaines, et un marché sous-servi de 100 Mds$.</div>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-box">
+              <div class="stat-val">5K</div>
+              <div class="stat-label">users an 1</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-val">200K€</div>
+              <div class="stat-label">ARR cible</div>
+            </div>
+          </div>
+          <div style="background:var(--green);border-radius:14px;padding:18px;margin-top:14px;">
+            <div style="font-size:13px;font-weight:600;color:var(--white);margin-bottom:6px;">📬 Contact</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);line-height:1.7;">
+              faycol.salami@yandatech.fr<br>
+              getkowo.com<br>
+              Bénin · Afrique & diaspora · KOWO SARL
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── NAVIGATION ─────────────────────────────────────────── -->
+<nav class="nav">
+  <button onclick="go(-1)">‹</button>
+  <div class="nav-dots" id="dots"></div>
+  <div class="nav-counter" id="counter">1 / 10</div>
+  <button onclick="go(1)">›</button>
+</nav>
+
+<script>
+  const TOTAL = 10;
+  let current = 1;
+  let animating = false;
+
+  const dotsEl = document.getElementById('dots');
+  for (let i = 1; i <= TOTAL; i++) {
+    const d = document.createElement('div');
+    d.className = 'nav-dot' + (i === 1 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  }
+
+  function go(dir) { goTo(current + dir); }
+
+  function goTo(n) {
+    if (animating) return;
+    n = Math.max(1, Math.min(TOTAL, n));
+    if (n === current) return;
+
+    animating = true;
+    const prev = document.getElementById('s' + current);
+    const next = document.getElementById('s' + n);
+
+    prev.classList.add('exit');
+    setTimeout(() => {
+      prev.classList.remove('active', 'exit');
+      // Remet le scroll en haut sur mobile lors du changement de slide
+      const inner = next.querySelector('.s-inner');
+      if (inner) inner.scrollTop = 0;
+      next.classList.add('active');
+      current = n;
+      updateUI();
+      animating = false;
+    }, 350);
+  }
+
+  function updateUI() {
+    document.getElementById('counter').textContent = current + ' / ' + TOTAL;
+    document.querySelectorAll('.nav-dot').forEach((d, i) => {
+      d.classList.toggle('active', i + 1 === current);
+    });
+  }
+
+  // Clavier
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   go(-1);
+  });
+
+  // Touch swipe — distingue scroll vertical et swipe horizontal
+  let touchStartX = 0, touchStartY = 0;
+  document.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    // Swipe horizontal seulement si plus large que vertical
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      go(dx < 0 ? 1 : -1);
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
