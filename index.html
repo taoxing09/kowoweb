@@ -1,25 +1,465 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="KOWO — Plateforme panafricaine d'épargne collective, de contributions communautaires et d'éducation financière. Disponible sur Android." />
-  <title>KOWO — Épargner ensemble, construire plus loin</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KOWO — Tontines numériques, clubs d'investissement collectif et crowdfunding panafricain. Disponible sur Android."/>
+  <title>KOWO — L'argent africain, enfin numérique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
-    :root{--green:#1C3B2A;--green2:#2D6147;--mint:#7FFFC4;--gold:#B8860B;--gold2:#FAF3E0;--bg:#F5F3EF;--surface:#FFFFFF;--ink:#0F1410;--muted:#6F7A72;--line:rgba(0,0,0,.08);--soft:#EEF5F0}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Jost,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}a{text-decoration:none;color:inherit}.nav{position:fixed;z-index:99;top:0;left:0;right:0;height:68px;padding:0 clamp(20px,5vw,64px);display:flex;align-items:center;justify-content:space-between;background:rgba(245,243,239,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.logo{font-size:22px;font-weight:700;letter-spacing:2.5px;color:var(--green)}.logo span{color:var(--gold)}.navlinks{display:flex;gap:30px;align-items:center}.navlinks a{font-size:14px;color:var(--muted)}.navlinks a:hover{color:var(--green)}.navcta{background:var(--green);color:#fff!important;padding:10px 20px;border-radius:12px;font-weight:600!important}.hero{min-height:100vh;padding:130px 24px 80px;background:radial-gradient(circle at 80% 12%,rgba(127,255,196,.12),transparent 30%),radial-gradient(circle at 8% 90%,rgba(184,134,11,.13),transparent 26%),var(--green);color:white;display:grid;place-items:center;text-align:center;overflow:hidden}.hero-inner{max-width:980px}.pill{display:inline-flex;gap:8px;align-items:center;background:rgba(127,255,196,.1);border:1px solid rgba(127,255,196,.22);color:var(--mint);border-radius:999px;padding:8px 16px;font-size:12px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:28px}.hero h1{font-size:clamp(42px,7vw,86px);line-height:1.03;letter-spacing:-3px;margin-bottom:22px}.hero h1 em{font-style:normal;color:var(--mint)}.hero p{max-width:660px;margin:0 auto;color:rgba(255,255,255,.68);font-size:clamp(16px,2vw,20px);font-weight:300}.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:40px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;padding:15px 26px;font-weight:700}.btn-primary{background:var(--mint);color:var(--green)}.btn-secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:white}.store{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.store a,.store span{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:11px 18px;color:white}.store small{display:block;font-size:10px;text-transform:uppercase;color:rgba(255,255,255,.45);letter-spacing:.8px}.store strong{display:block;font-size:14px}.strip{display:flex;justify-content:center;gap:0;flex-wrap:wrap;background:var(--gold2);border-block:1px solid rgba(184,134,11,.14);padding:14px 20px}.strip div{padding:4px 24px;color:var(--gold);font-size:13px;font-weight:600;border-right:1px solid rgba(184,134,11,.18)}.strip div:last-child{border-right:0}.section{padding:100px clamp(22px,5vw,64px)}.wrap{max-width:1120px;margin:0 auto}.label{text-align:center;text-transform:uppercase;letter-spacing:2px;color:var(--green2);font-size:12px;font-weight:700;margin-bottom:12px}.title{text-align:center;font-size:clamp(30px,4vw,50px);line-height:1.12;letter-spacing:-1.4px;margin-bottom:14px}.sub{text-align:center;color:var(--muted);max-width:660px;margin:0 auto 56px;font-size:17px;font-weight:300}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 18px 60px rgba(0,0,0,.04)}.card .ico{width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:var(--soft);font-size:24px;margin-bottom:20px}.card h3{font-size:19px;margin-bottom:10px}.card p{color:var(--muted);font-size:14.5px}.dark{background:var(--green);color:white}.dark .label,.dark .title{color:white}.dark .sub{color:rgba(255,255,255,.62)}.flow{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.flowbox{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:28px}.step{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.08);border-radius:18px;padding:16px;margin-bottom:12px}.step:last-child{margin-bottom:0}.num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--mint);color:var(--green);font-weight:800}.step strong{display:block}.step span{display:block;color:rgba(255,255,255,.58);font-size:13px}.notice{background:rgba(127,255,196,.1);border:1px solid rgba(127,255,196,.2);border-radius:22px;padding:22px;color:rgba(255,255,255,.76)}.notice strong{color:var(--mint)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stat{text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px}.stat b{font-size:42px;color:var(--green);letter-spacing:-2px}.stat p{color:var(--muted);font-size:14px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tl{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}.tl small{color:var(--gold);font-weight:700}.tl h3{margin:8px 0}.tl p{color:var(--muted);font-size:14px}.footer{background:#0B1510;color:white;padding:56px 28px}.footgrid{max-width:1120px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer p,.footer a{color:rgba(255,255,255,.55);font-size:14px}.footer h4{margin-bottom:12px}.copyright{max-width:1120px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.28);font-size:12px;text-align:center}@media(max-width:860px){.navlinks{display:none}.cards,.stats,.timeline,.flow,.footgrid{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.section{padding:72px 20px}.strip div{border-right:0}.card{padding:24px}}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:     #1C3B2A;
+      --green-mid: #2D6147;
+      --green-lt:  #EBF2ED;
+      --green-xlt: #F2F7F4;
+      --gold:      #B8860B;
+      --gold-lt:   #FAF3E0;
+      --mint:      #7FFFC4;
+      --ink:       #0F1410;
+      --ink-2:     #3A3E39;
+      --muted:     #7A8078;
+      --faint:     #B8BDB6;
+      --bg:        #F5F3EF;
+      --surface:   #FFFFFF;
+      --border:    rgba(0,0,0,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+
+    /* ── NAV ────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(245,243,239,0.94);
+      backdrop-filter: blur(16px);
+      padding: 0 48px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      z-index: 100;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo { font-size: 20px; font-weight: 700; color: var(--green); letter-spacing: 2px; text-decoration: none; }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; gap: 36px; align-items: center; }
+    .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; font-weight: 400; transition: color .2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta { background: var(--green); color: white !important; padding: 9px 22px; border-radius: 10px; font-weight: 500 !important; font-size: 13px !important; transition: opacity .2s; }
+    .nav-cta:hover { opacity: .85; }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      min-height: 100vh; background: var(--green);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 32px 80px;
+      position: relative; overflow: hidden;
+    }
+    .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero-orb-1 { width: 600px; height: 600px; top: -200px; right: -100px; background: rgba(127,255,196,0.04); border: 1px solid rgba(127,255,196,0.06); }
+    .hero-orb-2 { width: 400px; height: 400px; bottom: -150px; left: -80px; background: rgba(184,134,11,0.06); border: 1px solid rgba(184,134,11,0.08); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(127,255,196,0.1); border: 1px solid rgba(127,255,196,0.2); color: var(--mint); padding: 7px 18px; border-radius: 20px; font-size: 12px; font-weight: 500; margin-bottom: 32px; letter-spacing: .5px; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(44px, 7vw, 82px); font-weight: 700; letter-spacing: -3px; line-height: 1.05; color: white; margin-bottom: 20px; }
+    .hero h1 em { color: var(--mint); font-style: normal; }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.6); font-weight: 300; max-width: 540px; margin: 0 auto 44px; line-height: 1.75; }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 56px; }
+    .btn-primary { background: var(--mint); color: var(--green); padding: 15px 34px; border-radius: 13px; font-size: 15px; font-weight: 700; text-decoration: none; transition: opacity .2s; font-family: 'Jost', sans-serif; }
+    .btn-primary:hover { opacity: .88; }
+    .btn-ghost { background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.85); padding: 15px 34px; border-radius: 13px; font-size: 15px; font-weight: 400; text-decoration: none; border: 1px solid rgba(255,255,255,0.15); transition: background .2s; font-family: 'Jost', sans-serif; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.13); }
+    .hero-stores { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .store-pill { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 10px 18px; text-decoration: none; transition: background .2s; }
+    .store-pill:hover { background: rgba(255,255,255,0.12); }
+    .store-pill-icon { font-size: 20px; }
+    .store-pill-text { text-align: left; }
+    .store-pill-text small { display: block; font-size: 10px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: .7px; }
+    .store-pill-text strong { display: block; font-size: 14px; color: white; font-weight: 500; }
+
+    /* ── STRIP ────────────────────────────────────── */
+    .strip { background: var(--gold-lt); border-top: 1px solid rgba(184,134,11,0.15); border-bottom: 1px solid rgba(184,134,11,0.15); padding: 14px 32px; display: flex; gap: 0; justify-content: center; flex-wrap: wrap; overflow: hidden; }
+    .strip-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gold); font-weight: 500; padding: 4px 28px; border-right: 1px solid rgba(184,134,11,0.2); }
+    .strip-item:last-child { border-right: none; }
+
+    /* ── SECTIONS COMMUNES ────────────────────────── */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+    .section { padding: 100px 32px; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 600; color: var(--green); text-transform: uppercase; letter-spacing: 2px; text-align: center; margin-bottom: 14px; }
+    .section-title { font-size: clamp(30px, 4vw, 46px); font-weight: 700; letter-spacing: -1.5px; color: var(--ink); text-align: center; margin-bottom: 16px; line-height: 1.1; }
+    .section-sub { font-size: 17px; color: var(--muted); text-align: center; max-width: 500px; margin: 0 auto 64px; font-weight: 300; line-height: 1.75; }
+
+    /* ── MODULES ────────────────────────────────────── */
+    .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
+    .module-card { background: var(--surface); border-radius: 22px; padding: 32px; border: 0.5px solid var(--border); transition: transform .2s, box-shadow .2s; position: relative; overflow: hidden; }
+    .module-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 22px 22px 0 0; }
+    .module-card.c-green::before { background: var(--green); }
+    .module-card.c-gold::before { background: var(--gold); }
+    .module-card.c-indigo::before { background: #4F46E5; }
+    .module-card.c-teal::before { background: #0D9488; }
+    .module-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.07); }
+    .module-ico { width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 20px; }
+    .ico-green  { background: var(--green-lt); }
+    .ico-gold   { background: var(--gold-lt); }
+    .ico-indigo { background: #EEEDFE; }
+    .ico-teal   { background: #CCFBF1; }
+    .module-card h3 { font-size: 19px; font-weight: 600; color: var(--ink); margin-bottom: 10px; }
+    .module-card p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+    .module-tag { display: inline-block; margin-top: 16px; font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 8px; letter-spacing: .3px; }
+    .tag-green  { background: var(--green-lt); color: var(--green); }
+    .tag-gold   { background: var(--gold-lt); color: var(--gold); }
+    .tag-indigo { background: #EEEDFE; color: #4338CA; }
+    .tag-teal   { background: #CCFBF1; color: #0F766E; }
+
+    /* ── STATS ────────────────────────────────────── */
+    .stats-bg { background: var(--green-xlt); padding: 80px 32px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .stat-card { background: var(--surface); border-radius: 20px; padding: 28px 20px; border: 0.5px solid var(--border); text-align: center; }
+    .stat-card .big { font-size: 44px; font-weight: 700; color: var(--green); letter-spacing: -2px; line-height: 1; margin-bottom: 10px; }
+    .stat-card .lbl { font-size: 13px; color: var(--muted); font-weight: 400; line-height: 1.5; }
+
+    /* ── MARCHÉS ────────────────────────────────────── */
+    .markets-bg { background: var(--green); padding: 100px 32px; }
+    .markets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 16px; max-width: 1100px; margin: 0 auto; }
+    .market-card { background: rgba(255,255,255,0.07); border-radius: 20px; padding: 28px; border: 1px solid rgba(255,255,255,0.1); transition: background .2s; }
+    .market-card:hover { background: rgba(255,255,255,0.11); }
+    .market-flag { font-size: 36px; margin-bottom: 14px; display: block; }
+    .market-card h3 { font-size: 22px; font-weight: 700; color: white; margin-bottom: 4px; letter-spacing: -1px; }
+    .market-name { font-size: 12px; color: rgba(255,255,255,0.45); margin-bottom: 20px; text-transform: uppercase; letter-spacing: .7px; }
+    .market-stats { display: flex; gap: 20px; }
+    .market-stat-val { font-size: 20px; font-weight: 600; color: var(--mint); }
+    .market-stat-lbl { font-size: 10px; color: rgba(255,255,255,0.35); margin-top: 3px; text-transform: uppercase; letter-spacing: .5px; }
+    .markets-bg .section-label { color: rgba(255,255,255,0.4); }
+    .markets-bg .section-title { color: white; }
+    .markets-bg .section-sub   { color: rgba(255,255,255,0.55); }
+
+    /* ── COMMENT ÇA MARCHE ──────────────────────────── */
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 32px; }
+    .step { text-align: center; }
+    .step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--green); color: white; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+    .step h3 { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+    .step p  { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ── TÉMOIGNAGES ────────────────────────────────── */
+    .testi-bg { background: var(--bg); padding: 100px 32px; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .testi-card { background: var(--surface); border-radius: 20px; padding: 28px; border: 0.5px solid var(--border); }
+    .testi-stars { color: var(--gold); font-size: 15px; margin-bottom: 14px; letter-spacing: 2px; }
+    .testi-text { font-size: 15px; color: var(--ink-2); line-height: 1.75; margin-bottom: 20px; font-style: italic; font-weight: 300; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-av { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: white; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .testi-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .testi-loc  { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+    /* ── INVESTISSEURS ────────────────────────────────── */
+    .invest-bg {
+      background: linear-gradient(135deg, var(--green) 0%, #0D2A1A 100%);
+      padding: 100px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .invest-bg::before {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(184,134,11,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .invest-inner { max-width: 1100px; margin: 0 auto; }
+    .invest-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .invest-bg .section-label { color: rgba(184,134,11,0.7); text-align: left; margin-bottom: 12px; }
+    .invest-title { font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; letter-spacing: -1.5px; color: white; line-height: 1.1; margin-bottom: 20px; }
+    .invest-title em { color: var(--gold); font-style: normal; }
+    .invest-sub { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 36px; font-weight: 300; }
+    .invest-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 36px; }
+    .invest-stat { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 16px; text-align: center; }
+    .invest-stat .val { font-size: 30px; font-weight: 700; color: var(--gold); letter-spacing: -1px; line-height: 1; margin-bottom: 6px; }
+    .invest-stat .lbl { font-size: 11px; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: .5px; }
+    .invest-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: white; padding: 14px 28px; border-radius: 12px; font-size: 14px; font-weight: 600; text-decoration: none; transition: opacity .2s; font-family: 'Jost', sans-serif; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-gold:hover { opacity: .88; }
+    .btn-glass { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.75); padding: 14px 28px; border-radius: 12px; font-size: 14px; font-weight: 400; text-decoration: none; border: 1px solid rgba(255,255,255,0.15); transition: background .2s; font-family: 'Jost', sans-serif; }
+    .btn-glass:hover { background: rgba(255,255,255,0.1); }
+    /* Droite invest */
+    .invest-cards { display: flex; flex-direction: column; gap: 14px; }
+    .invest-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 18px; padding: 22px; position: relative; overflow: hidden; }
+    .invest-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; border-radius: 2px; }
+    .invest-card.ic-gold::before { background: var(--gold); }
+    .invest-card.ic-mint::before { background: var(--mint); }
+    .invest-card.ic-white::before { background: rgba(255,255,255,0.3); }
+    .invest-card h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 6px; }
+    .invest-card p  { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+    .invest-card .ic-badge { display: inline-block; margin-bottom: 10px; font-size: 10px; font-weight: 600; color: var(--gold); background: rgba(184,134,11,0.15); border: 1px solid rgba(184,134,11,0.25); padding: 3px 10px; border-radius: 8px; letter-spacing: .5px; }
+    /* Barre allocation */
+    .alloc-rows { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+    .alloc-row { display: flex; align-items: center; gap: 10px; }
+    .alloc-label { font-size: 11px; color: rgba(255,255,255,0.5); flex: 1; }
+    .alloc-bar-wrap { width: 90px; height: 5px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+    .alloc-bar { height: 100%; border-radius: 3px; }
+    .alloc-pct { font-size: 11px; font-weight: 600; color: var(--gold); width: 28px; text-align: right; }
+    .pitch-deck-link {
+      margin-top: 14px;
+      display: flex; align-items: center; gap: 10px;
+      background: rgba(184,134,11,0.12);
+      border: 1px solid rgba(184,134,11,0.25);
+      border-radius: 12px; padding: 12px 16px;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .pitch-deck-link:hover { background: rgba(184,134,11,0.2); }
+    .pitch-deck-link span { font-size: 13px; font-weight: 600; color: var(--gold); }
+    .pitch-deck-link small { display: block; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 1px; }
+
+    /* ── CTA FINAL ──────────────────────────────────── */
+    .cta-bg { background: var(--green); padding: 100px 32px; text-align: center; }
+    .cta-bg h2 { font-size: clamp(32px, 5vw, 56px); font-weight: 700; letter-spacing: -2px; color: white; margin-bottom: 16px; line-height: 1.1; }
+    .cta-bg h2 em { color: var(--mint); font-style: normal; }
+    .cta-bg p { font-size: 17px; color: rgba(255,255,255,0.55); margin-bottom: 40px; font-weight: 300; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-mint { background: var(--mint); color: var(--green); padding: 16px 36px; border-radius: 14px; font-size: 16px; font-weight: 700; text-decoration: none; font-family: 'Jost', sans-serif; transition: opacity .2s; }
+    .btn-mint:hover { opacity: .88; }
+    .btn-outline { background: transparent; color: rgba(255,255,255,0.75); padding: 16px 36px; border-radius: 14px; font-size: 16px; font-weight: 400; text-decoration: none; font-family: 'Jost', sans-serif; border: 1px solid rgba(255,255,255,0.2); transition: background .2s; }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    footer { background: var(--ink); padding: 56px 48px 28px; }
+    .footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand-logo { font-size: 22px; font-weight: 700; color: white; letter-spacing: 2px; margin-bottom: 12px; }
+    .footer-brand-logo span { color: var(--mint); }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 240px; }
+    .footer-col h5 { font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.35); text-decoration: none; margin-bottom: 10px; transition: color .2s; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { max-width: 1100px; margin: 0 auto; border-top: 0.5px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; color: rgba(255,255,255,0.25); }
+
+    /* ── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 900px) {
+      .invest-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .hero { padding: 100px 20px 64px; }
+      .section { padding: 72px 20px; }
+      .stats-bg, .markets-bg, .testi-bg, .invest-bg, .cta-bg { padding: 72px 20px; }
+      footer { padding: 48px 20px 24px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .strip-item { padding: 4px 16px; font-size: 12px; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-ctas, .cta-buttons, .invest-btns { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 <body>
-  <nav class="nav"><a class="logo" href="/">KO<span>WO</span></a><div class="navlinks"><a href="#solution">Solution</a><a href="#fonctionnement">Fonctionnement</a><a href="#roadmap">Roadmap</a><a href="/pitch/kowo-pitch-deck.html">Pitch deck</a><a class="navcta" href="https://play.google.com/store/apps/details?id=com.kowo.app&pli=1" target="_blank" rel="noopener">Télécharger</a></div></nav>
-  <header class="hero"><div class="hero-inner"><div class="pill">Plateforme panafricaine · Android disponible</div><h1>Épargner ensemble.<br><em>Construire plus loin.</em></h1><p>KOWO aide les communautés africaines et leur diaspora à organiser l’épargne collective, les contributions communautaires et l’éducation financière dans un cadre numérique plus clair, plus traçable et plus moderne.</p><div class="ctas"><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.kowo.app&pli=1" target="_blank" rel="noopener">▶ Télécharger sur Play Store</a><a class="btn btn-secondary" href="#fonctionnement">Comprendre les flux</a></div><div class="store"><a href="https://play.google.com/store/apps/details?id=com.kowo.app&pli=1" target="_blank" rel="noopener"><span>🤖</span><div><small>Disponible sur</small><strong>Google Play</strong></div></a><span><span></span><div><small>Bientôt sur</small><strong>App Store</strong></div></span></div></div></header>
-  <div class="strip"><div>Épargne collective</div><div>Contributions communautaires</div><div>Simulation BRVM & NGX</div><div>Paiements via partenaires agréés</div></div>
-  <section class="section" id="solution"><div class="wrap"><div class="label">Solution</div><h2 class="title">Une application pour organiser la confiance</h2><p class="sub">KOWO ne remplace pas les communautés. KOWO leur donne des outils numériques pour planifier, suivre, notifier et conserver un historique fiable.</p><div class="cards"><div class="card"><div class="ico">🤝</div><h3>Épargne rotative</h3><p>Création de groupes, ordre de rotation, suivi des contributions, rappels et historique partagé.</p></div><div class="card"><div class="ico">🚀</div><h3>Projets collectifs</h3><p>Organisation de contributions pour financer des objectifs familiaux, associatifs ou communautaires.</p></div><div class="card"><div class="ico">📈</div><h3>Simulation marchés</h3><p>Découverte pédagogique des marchés africains sans investissement réel ni exécution d’ordre.</p></div><div class="card"><div class="ico">🔐</div><h3>Traçabilité</h3><p>Une expérience pensée pour la transparence, la sécurité, les notifications et la confiance.</p></div></div></div></section>
-  <section class="section dark" id="fonctionnement"><div class="wrap"><div class="label">Paiements</div><h2 class="title">KOWO organise. Les partenaires agréés exécutent les paiements.</h2><p class="sub">Le modèle est volontairement simple : KOWO agit comme plateforme technologique. Les flux financiers sont opérés par des partenaires de paiement habilités.</p><div class="flow"><div class="flowbox"><div class="step"><div class="num">1</div><div><strong>Utilisateur</strong><span>Initie ou règle une contribution.</span></div></div><div class="step"><div class="num">2</div><div><strong>KOWO</strong><span>Planifie, notifie, historise et affiche l’état du groupe.</span></div></div><div class="step"><div class="num">3</div><div><strong>Partenaire de paiement</strong><span>Traite la transaction via Mobile Money, carte, portefeuille ou virement.</span></div></div><div class="step"><div class="num">4</div><div><strong>Bénéficiaire</strong><span>Reçoit les fonds selon les règles du groupe.</span></div></div></div><div class="notice"><strong>Point conformité :</strong><br>KOWO ne reçoit pas, ne conserve pas et ne gère pas directement les fonds des utilisateurs pour son propre compte. Les paiements, encaissements, transferts et décaissements sont destinés à être réalisés exclusivement par des partenaires agréés.</div></div></div></section>
-  <section class="section"><div class="wrap"><div class="label">Marché</div><h2 class="title">Afrique + diaspora : une même communauté financière</h2><p class="sub">KOWO vise d’abord les usages réels : familles, groupes d’amis, associations, diaspora et communautés habituées à contribuer ensemble.</p><div class="stats"><div class="stat"><b>1%</b><p>Commission cible sur l’épargne collective au lancement.</p></div><div class="stat"><b>3%</b><p>Commission cible sur les clubs et projets plus structurés.</p></div><div class="stat"><b>0€</b><p>Investissement réel actuellement : uniquement simulation et éducation financière.</p></div></div></div></section>
-  <section class="section" id="roadmap"><div class="wrap"><div class="label">Roadmap</div><h2 class="title">Construire progressivement, sans brûler les étapes</h2><div class="timeline"><div class="tl"><small>2026</small><h3>Lancement Afrique</h3><p>Finalisation des paiements, premiers groupes, épargne collective et contributions communautaires.</p></div><div class="tl"><small>2027</small><h3>Diaspora pilote</h3><p>Ouverture progressive aux groupes mixtes Afrique-diaspora et renforcement de la conformité.</p></div><div class="tl"><small>2028+</small><h3>Investissement via partenaires</h3><p>Accès possible à des services d’investissement uniquement via SGI, courtiers ou partenaires agréés.</p></div></div></div></section>
-  <footer class="footer"><div class="footgrid"><div><a class="logo" href="/">KO<span>WO</span></a><p style="margin-top:14px">Plateforme technologique panafricaine d’épargne collective, de contribution communautaire et d’éducation financière.</p><p style="margin-top:12px"><a href="mailto:contact@getkowo.com">contact@getkowo.com</a></p></div><div><h4>Produit</h4><p><a href="https://play.google.com/store/apps/details?id=com.kowo.app&pli=1">Play Store</a></p><p><a href="/pitch/kowo-pitch-deck.html">Pitch deck</a></p><p><a href="/legal/conformite.html">Conformité</a></p></div><div><h4>Légal</h4><p><a href="/legal/cgu.html">CGU</a></p><p><a href="/legal/confidentialite.html">Confidentialité</a></p><p><a href="/legal/mentions-legales.html">Mentions légales</a></p></div></div><div class="copyright">© 2026 KOWO. Tous droits réservés. getkowo.com</div></footer>
+
+<!-- ── NAV ──────────────────────────────────────────── -->
+<nav>
+  <a class="nav-logo" href="#">KO<span>WO</span></a>
+  <div class="nav-links">
+    <a href="#fonctionnalites">Fonctionnalités</a>
+    <a href="#marches">Marchés</a>
+    <a href="#comment">Comment ça marche</a>
+    <a href="#investisseurs">Investisseurs</a>
+    <a href="mailto:contact@yandatech.fr" class="nav-cta">Télécharger</a>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-badge">🌍 &nbsp;Disponible sur Android · iOS bientôt</div>
+  <h1>L'argent africain,<br/><em>enfin numérique.</em></h1>
+  <p class="hero-sub">Tontines numériques, clubs d'investissement collectif et crowdfunding pour les entrepreneurs africains — tout depuis ton téléphone.</p>
+  <div class="hero-ctas">
+    <a href="#telecharger" class="btn-primary">Télécharger KOWO →</a>
+    <a href="#fonctionnalites" class="btn-ghost">Découvrir les fonctionnalités</a>
+  </div>
+  <div class="hero-stores">
+    <a href="#" class="store-pill"><span class="store-pill-icon">🤖</span><div class="store-pill-text"><small>Disponible sur</small><strong>Google Play</strong></div></a>
+    <a href="#" class="store-pill"><span class="store-pill-icon">🍎</span><div class="store-pill-text"><small>Bientôt sur</small><strong>App Store</strong></div></a>
+  </div>
+</section>
+
+<!-- ── STRIP ──────────────────────────────────────────── -->
+<div class="strip">
+  <div class="strip-item">🔒 Identité vérifiée (KYC)</div>
+  <div class="strip-item">📱 Wave · Orange Money · MTN</div>
+  <div class="strip-item">🌍 BRVM · NGX · Marchés africains</div>
+  <div class="strip-item">🤝 Création de club gratuite</div>
+</div>
+
+<!-- ── STATS ──────────────────────────────────────────── -->
+<div class="stats-bg">
+  <div class="stats-grid">
+    <div class="stat-card"><div class="big">130M</div><div class="lbl">habitants zone UEMOA</div></div>
+    <div class="stat-card"><div class="big">220M</div><div class="lbl">habitants Nigeria</div></div>
+    <div class="stat-card"><div class="big">0 F</div><div class="lbl">pour créer un club</div></div>
+    <div class="stat-card"><div class="big">1M</div><div class="lbl">FCFA virtuels offerts en simulation</div></div>
+    <div class="stat-card"><div class="big">3%</div><div class="lbl">commission crowdfunding seulement</div></div>
+  </div>
+</div>
+
+<!-- ── FONCTIONNALITÉS ────────────────────────────────── -->
+<section class="section" id="fonctionnalites">
+  <div class="section-label">Ce que fait KOWO</div>
+  <h2 class="section-title">Trois façons d'investir ensemble</h2>
+  <p class="section-sub">Inspiré des pratiques financières africaines, numérisé pour la génération mobile.</p>
+  <div class="modules">
+    <div class="module-card c-gold"><div class="module-ico ico-gold">🤝</div><h3>Tontine numérique</h3><p>Crée ou rejoins une tontine avec tes proches. Chaque mois, un membre reçoit le pot complet — en rotation, en toute transparence. Une caution bloquée chez KOWO protège le groupe.</p><span class="module-tag tag-gold">Rotation mensuelle · Caution sécurisée</span></div>
+    <div class="module-card c-green"><div class="module-ico ico-green">💼</div><h3>Club d'investissement</h3><p>Mets en commun vos ressources pour financer un projet commun — terrain, commerce, agriculture. Chacun détient une part proportionnelle à sa contribution. Contributions libres ou mensuelles.</p><span class="module-tag tag-green">Parts proportionnelles · Contributions libres</span></div>
+    <div class="module-card c-indigo"><div class="module-ico ico-indigo">🚀</div><h3>Crowdfunding de projets</h3><p>Porteurs de projets africains : publiez votre initiative, recevez des dons. Les fonds se débloquent par jalons validés par les donateurs — 3% de commission seulement.</p><span class="module-tag tag-indigo">Jalons transparents · 3% de commission</span></div>
+    <div class="module-card c-teal"><div class="module-ico ico-teal">📈</div><h3>Simulation boursière BRVM</h3><p>Entraîne-toi sur les marchés BRVM et NGX avec 1 000 000 FCFA virtuels. Apprends à lire les cours, passer des ordres et gérer un portefeuille — sans risquer un franc réel.</p><span class="module-tag tag-teal">1M FCFA virtuels · BRVM · NGX</span></div>
+    <div class="module-card c-green"><div class="module-ico ico-green">📱</div><h3>Mobile Money First</h3><p>Dépôts et retraits via Wave, Orange Money et MTN MoMo. Pas de compte bancaire requis. Conçu pour les Africains où qu'ils soient — au pays ou dans la diaspora.</p><span class="module-tag tag-green">Wave · Orange Money · MTN</span></div>
+    <div class="module-card c-gold"><div class="module-ico ico-gold">🔒</div><h3>Sécurité & Conformité</h3><p>Développé par un expert en cybersécurité. Vérification KYC d'identité en 3 minutes. Fonds clients ségrégués. Votre argent est protégé à chaque étape.</p><span class="module-tag tag-gold">KYC · JWT sécurisé · RGPD</span></div>
+  </div>
+</section>
+
+<!-- ── MARCHÉS ────────────────────────────────────────── -->
+<div class="markets-bg" id="marches">
+  <div class="wrap">
+    <div class="section-label">Marchés disponibles</div>
+    <h2 class="section-title">Deux bourses africaines.<br/>Un seul portefeuille.</h2>
+    <p class="section-sub">KOWO te connecte aux marchés financiers africains directement depuis ton téléphone.</p>
+    <div class="markets-grid">
+      <div class="market-card"><span class="market-flag">🌍</span><h3>BRVM</h3><div class="market-name">Bourse Régionale · Zone UEMOA</div><div class="market-stats"><div><div class="market-stat-val">47</div><div class="market-stat-lbl">sociétés</div></div><div><div class="market-stat-val">8</div><div class="market-stat-lbl">pays UEMOA</div></div><div><div class="market-stat-val">FCFA</div><div class="market-stat-lbl">devise</div></div></div></div>
+      <div class="market-card"><span class="market-flag">🇳🇬</span><h3>NGX</h3><div class="market-name">Nigerian Exchange Group</div><div class="market-stats"><div><div class="market-stat-val">140+</div><div class="market-stat-lbl">sociétés</div></div><div><div class="market-stat-val">220M</div><div class="market-stat-lbl">habitants</div></div><div><div class="market-stat-val">NGN</div><div class="market-stat-lbl">devise</div></div></div></div>
+      <div class="market-card"><span class="market-flag">📊</span><h3>Simulation</h3><div class="market-name">Apprentissage sans risque</div><div class="market-stats"><div><div class="market-stat-val">1M</div><div class="market-stat-lbl">FCFA virtuels</div></div><div><div class="market-stat-val">∞</div><div class="market-stat-lbl">essais</div></div><div><div class="market-stat-val">0 F</div><div class="market-stat-lbl">risque</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── COMMENT ÇA MARCHE ──────────────────────────────── -->
+<section class="section" id="comment">
+  <div class="section-label">Simple comme bonjour</div>
+  <h2 class="section-title">Prêt en 3 minutes</h2>
+  <p class="section-sub">Pas de paperasse, pas de banque. Juste ton numéro de téléphone.</p>
+  <div class="steps-grid">
+    <div class="step"><div class="step-num">1</div><h3>Crée ton compte</h3><p>Inscris-toi avec ton numéro de téléphone. Un SMS OTP suffit. Vérification KYC en 3 minutes pour débloquer toutes les fonctionnalités.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Rejoins ou crée un club</h3><p>Crée ta tontine ou ton club d'investissement, invite tes proches avec un code unique. Ou explore les clubs ouverts dans l'onglet Explorer.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Cotise via Mobile Money</h3><p>Paie via Wave, Orange Money ou MTN MoMo. Suis tes contributions, ta part et la progression du groupe en temps réel.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>Reçois ou investis</h3><p>Reçois ton pot tontine à ton tour, vois ton investissement fructifier, ou soutiens un entrepreneur africain via le crowdfunding.</p></div>
+  </div>
+</section>
+
+<!-- ── TÉMOIGNAGES ────────────────────────────────────── -->
+<div class="testi-bg">
+  <div class="wrap">
+    <div class="section-label">Ils utilisent KOWO</div>
+    <h2 class="section-title" style="margin-bottom:16px">La communauté parle</h2>
+    <p class="section-sub">Des Africains et de la diaspora font confiance à KOWO pour leur épargne collective.</p>
+    <div class="testi-grid">
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"On faisait notre tontine familiale par WhatsApp. Avec KOWO, chaque centime est tracé et tout le monde voit sa part en temps réel. Plus de disputes !"</p><div class="testi-author"><div class="testi-av">AF</div><div><div class="testi-name">Adjoa F.</div><div class="testi-loc">Accra, Ghana</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"J'ai lancé un club avec 8 amis pour financer un terrain au Bénin. Les parts se calculent automatiquement. Impressionnant pour une app mobile."</p><div class="testi-author"><div class="testi-av" style="background:#2D6147">SK</div><div><div class="testi-name">Serge K.</div><div class="testi-loc">Cotonou, Bénin</div></div></div></div>
+      <div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-text">"La simulation m'a permis d'apprendre la BRVM sans risquer mon argent. Maintenant je suis prêt à investir pour de vrai sur les marchés africains."</p><div class="testi-author"><div class="testi-av" style="background:#B8860B">MD</div><div><div class="testi-name">Moussa D.</div><div class="testi-loc">Dakar, Sénégal</div></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECTION INVESTISSEURS ───────────────────────────── -->
+<div class="invest-bg" id="investisseurs">
+  <div class="invest-inner">
+    <div class="invest-grid">
+      <!-- Gauche -->
+      <div>
+        <div class="section-label" style="text-align:left;">Pour les investisseurs</div>
+        <h2 class="invest-title">Rejoignez<br/><em>l'aventure</em> KOWO.</h2>
+        <p class="invest-sub">Un marché de 100 Mds$, un MVP fonctionnel sur Google Play, un fondateur technique aux racines africaines. Nous levons 150 000 € en amorçage pour accélérer.</p>
+        <div class="invest-stats">
+          <div class="invest-stat"><div class="val">150K €</div><div class="lbl">Levée amorçage</div></div>
+          <div class="invest-stat"><div class="val">5 000</div><div class="lbl">Users an 1</div></div>
+          <div class="invest-stat"><div class="val">18 mois</div><div class="lbl">Rentabilité op.</div></div>
+          <div class="invest-stat"><div class="val">200K €</div><div class="lbl">ARR cible an 1</div></div>
+        </div>
+        <div class="invest-btns">
+          <a href="mailto:faycol.salami@yandatech.fr" class="btn-gold">📬 Contacter Fayçol SALAMI</a>
+          <a href="#" class="btn-glass">Voir la démo →</a>
+        </div>
+        <a href="pitch/kowo-pitch-deck.html" class="pitch-deck-link" title="Pitch Deck KOWO 2026">
+          <span>📊</span>
+          <div>
+            <span>Télécharger le Pitch Deck</span>
+            <small>KOWO 2026 · 10 slides · Amorçage 150K€</small>
+          </div>
+        </a>
+      </div>
+      <!-- Droite -->
+      <div class="invest-cards">
+        <div class="invest-card ic-gold">
+          <div class="ic-badge">MODÈLE ÉCONOMIQUE</div>
+          <h4>Revenus récurrents à chaque transaction</h4>
+          <p>1% sur les retraits · 3% sur le crowdfunding · Intérêts sur cautions tontine · Abonnement Premium (roadmap)</p>
+        </div>
+        <div class="invest-card ic-mint">
+          <div class="ic-badge">TRACTION</div>
+          <h4>MVP fonctionnel · Google Play · KYC production</h4>
+          <p>React Native + Node.js + Supabase. KYC Sumsub en production. Application soumise sur Google Play Store. Backend sécurisé JWT + biométrie + RLS.</p>
+        </div>
+        <div class="invest-card ic-white">
+          <div class="ic-badge" style="color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.06);">UTILISATION DES FONDS</div>
+          <h4>150 000 € · Amorçage 2026</h4>
+          <div class="alloc-rows">
+            <div class="alloc-row"><span class="alloc-label">Développement produit & engineering</span><div class="alloc-bar-wrap"><div class="alloc-bar" style="width:40%;background:#B8860B;"></div></div><span class="alloc-pct">40%</span></div>
+            <div class="alloc-row"><span class="alloc-label">Acquisition & marketing diaspora</span><div class="alloc-bar-wrap"><div class="alloc-bar" style="width:25%;background:#2E5C42;"></div></div><span class="alloc-pct">25%</span></div>
+            <div class="alloc-row"><span class="alloc-label">Conformité réglementaire</span><div class="alloc-bar-wrap"><div class="alloc-bar" style="width:20%;background:rgba(184,134,11,0.6);"></div></div><span class="alloc-pct">20%</span></div>
+            <div class="alloc-row"><span class="alloc-label">Opérations & infrastructure</span><div class="alloc-bar-wrap"><div class="alloc-bar" style="width:15%;background:rgba(255,255,255,0.25);"></div></div><span class="alloc-pct">15%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA FINAL ──────────────────────────────────────── -->
+<div class="cta-bg" id="telecharger">
+  <div class="section-label" style="color:rgba(127,255,196,0.6)">Rejoins la communauté</div>
+  <h2>Ton argent mérite<br/><em>mieux</em></h2>
+  <p>Télécharge KOWO et commence à épargner, investir et faire grandir ta communauté dès aujourd'hui.</p>
+  <div class="cta-buttons">
+    <a href="#" class="btn-mint">Télécharger sur Android →</a>
+    <a href="mailto:contact@yandatech.fr" class="btn-outline">Nous contacter</a>
+  </div>
+  <p style="margin-top:28px;font-size:13px;color:rgba(255,255,255,0.25)">Un produit <a href="https://yandatech.fr" style="color:rgba(127,255,196,0.5);text-decoration:none">YandaTech</a> &nbsp;·&nbsp; Développé par Fayçol SALAMI</p>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">KO<span>WO</span></div>
+      <p>L'application d'épargne et d'investissement collectif panafricain. Par YandaTech EI, Île-de-France, France.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Produit</h5>
+      <a href="#fonctionnalites">Tontine numérique</a>
+      <a href="#fonctionnalites">Clubs d'investissement</a>
+      <a href="#fonctionnalites">Crowdfunding</a>
+      <a href="#fonctionnalites">Simulation BRVM</a>
+    </div>
+    <div class="footer-col">
+      <h5>Légal</h5>
+      <a href="/legal/cgu">CGU</a>
+      <a href="/legal/privacy">Politique de confidentialité</a>
+      <a href="/legal/mentions">Mentions légales</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="mailto:faycol.salami@yandatech.fr">faycol.salami@yandatech.fr</a>
+      <a href="https://yandatech.fr">yandatech.fr</a>
+      <a href="#investisseurs">Espace investisseurs</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 YandaTech EI · Tous droits réservés</span>
+    <span>kowo.yandatech.fr</span>
+  </div>
+</footer>
+
 </body>
 </html>
