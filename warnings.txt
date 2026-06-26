@@ -1,0 +1,63 @@
+⚠️ Slide 1: Overlap detected between element 1 (shape, center_x=1.050, center_y=6.250) and element 6 (shape, center_x=1.420, center_y=5.470).
+❌ Slide 1: Severe text overlap detected between element 1 (shape, center_x=1.050, center_y=6.250) and element 7 (text, center_x=1.420, center_y=5.465) (overlap_horizontal=0.960, overlap_vertical=0.140). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+❌ Slide 1: Severe text overlap detected between element 1 (shape, center_x=1.050, center_y=6.250) and element 12 (text, center_x=3.820, center_y=7.050) (overlap_horizontal=1.080, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 1: Found 3 overlapping pair(s).
+⚠️ Slide 4: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=1.600, center_y=3.195).
+⚠️ Slide 4: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 13 (shape, center_x=3.600, center_y=3.195).
+⚠️ Slide 4: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 16 (shape, center_x=5.600, center_y=3.195).
+⚠️ Slide 4: Found 3 overlapping pair(s).
+❌ Slide 5: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.525, center_y=2.675) (overlap_horizontal=3.450, overlap_vertical=0.400). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 5: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.830, center_y=2.675).
+❌ Slide 5: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 7 (text, center_x=2.525, center_y=2.410) (overlap_horizontal=2.890, overlap_vertical=0.180). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+❌ Slide 5: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.575, center_y=2.675) (overlap_horizontal=1.520, overlap_vertical=0.400). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 5: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=4.880, center_y=2.675).
+❌ Slide 5: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 11 (text, center_x=6.575, center_y=2.410) (overlap_horizontal=1.240, overlap_vertical=0.180). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 5: Found 6 overlapping pair(s).
+❌ Slide 8: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.450, center_y=2.850) (overlap_horizontal=3.200, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 8: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.850).
+❌ Slide 8: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.650, center_y=2.850) (overlap_horizontal=1.320, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 8: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=5.080, center_y=2.850).
+⚠️ Slide 8: Found 4 overlapping pair(s).
+❌ Slide 9: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=6.550, center_y=2.390) (overlap_horizontal=5.470, overlap_vertical=0.420). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 9: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.930, center_y=2.390).
+❌ Slide 9: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 7 (text, center_x=6.550, center_y=2.360) (overlap_horizontal=5.190, overlap_vertical=0.230). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 9: Found 3 overlapping pair(s).
+❌ Slide 10: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.200, center_y=3.300) (overlap_horizontal=2.700, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+❌ Slide 10: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=5.200, center_y=3.300) (overlap_horizontal=2.520, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 10: Found 2 overlapping pair(s).
+❌ Slide 11: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.575, center_y=2.850) (overlap_horizontal=3.450, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 11: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.850).
+❌ Slide 11: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.675, center_y=2.850) (overlap_horizontal=1.420, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 11: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=4.980, center_y=2.850).
+⚠️ Slide 11: Found 4 overlapping pair(s).
+⚠️ Slide 12: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=1.925, center_y=2.570).
+⚠️ Slide 12: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 7 (shape, center_x=4.345, center_y=2.570).
+⚠️ Slide 12: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.765, center_y=2.570).
+⚠️ Slide 12: Found 3 overlapping pair(s).
+❌ Slide 14: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.575, center_y=2.840) (overlap_horizontal=3.450, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 14: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.840).
+❌ Slide 14: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.675, center_y=2.840) (overlap_horizontal=1.420, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 14: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=4.980, center_y=2.840).
+⚠️ Slide 14: Found 4 overlapping pair(s).
+❌ Slide 15: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.225, center_y=3.425) (overlap_horizontal=2.750, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+❌ Slide 15: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=5.275, center_y=3.425) (overlap_horizontal=2.470, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 15: Found 2 overlapping pair(s).
+❌ Slide 16: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=3.700, center_y=2.410) (overlap_horizontal=5.520, overlap_vertical=0.420). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 16: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.410).
+❌ Slide 16: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 7 (text, center_x=3.700, center_y=2.360) (overlap_horizontal=5.140, overlap_vertical=0.230). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 16: Found 3 overlapping pair(s).
+❌ Slide 17: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.650, center_y=3.300) (overlap_horizontal=3.300, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 17: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=1.030, center_y=3.300).
+❌ Slide 17: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.650, center_y=3.300) (overlap_horizontal=1.370, overlap_vertical=0.150). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 17: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=5.030, center_y=3.300).
+⚠️ Slide 17: Found 4 overlapping pair(s).
+❌ Slide 18: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=3.500, center_y=2.410) (overlap_horizontal=5.300, overlap_vertical=0.420). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 18: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.410).
+⚠️ Slide 18: Found 2 overlapping pair(s).
+❌ Slide 19: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (text, center_x=3.550, center_y=2.125) (overlap_horizontal=5.300, overlap_vertical=0.320). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 19: Found 1 overlapping pair(s).
+❌ Slide 21: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 5 (shape, center_x=2.575, center_y=2.775) (overlap_horizontal=3.450, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 21: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 6 (shape, center_x=0.880, center_y=2.775).
+❌ Slide 21: Severe text overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 9 (shape, center_x=6.675, center_y=2.775) (overlap_horizontal=1.420, overlap_vertical=0.200). THIS MUST BE FIXED. Suggestion: reposition elements vertically.
+⚠️ Slide 21: Overlap detected between element 4 (text, center_x=3.545, center_y=2.240) and element 10 (shape, center_x=4.980, center_y=2.775).
+⚠️ Slide 21: Found 4 overlapping pair(s).
