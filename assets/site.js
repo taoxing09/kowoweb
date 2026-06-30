@@ -1,0 +1,14 @@
+
+(function(){
+  const btn=document.querySelector('.hamburger');
+  const panel=document.querySelector('.mobile-panel');
+  const close=document.querySelector('.mobile-close');
+  if(!btn||!panel) return;
+  const open=()=>{document.body.classList.add('menu-open');btn.setAttribute('aria-expanded','true');panel.setAttribute('aria-hidden','false');};
+  const shut=()=>{document.body.classList.remove('menu-open');btn.setAttribute('aria-expanded','false');panel.setAttribute('aria-hidden','true');};
+  btn.addEventListener('click',()=>document.body.classList.contains('menu-open')?shut():open());
+  close&&close.addEventListener('click',shut);
+  panel.addEventListener('click',e=>{if(e.target===panel) shut();});
+  panel.querySelectorAll('a').forEach(a=>a.addEventListener('click',shut));
+  window.addEventListener('keydown',e=>{if(e.key==='Escape') shut();});
+})();
