@@ -1,0 +1,1 @@
+(()=>{const b=document.querySelector('.hamburger'),p=document.querySelector('.mobile-panel'),c=document.querySelector('.mobile-close');if(b&&p){const close=()=>document.body.classList.remove('menu-open');b.onclick=()=>document.body.classList.toggle('menu-open');c&&(c.onclick=close);p.onclick=e=>{if(e.target===p)close()};p.querySelectorAll('a').forEach(a=>a.onclick=close)}})();
