@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="KOWO Design System — positionnement, langage produit, composants et règles de marque."/>
+<title>KOWO Design System — Trusted Infrastructure</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--green:#1C3B2A;--green2:#2D6147;--mint:#7FFFC4;--gold:#B8860B;--cream:#F5F3EF;--paper:#FFFDF8;--ink:#0F1410;--muted:#69756E;--line:rgba(15,20,16,.1);--shadow:0 24px 70px rgba(28,59,42,.12)}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Jost,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}a{text-decoration:none;color:inherit}.nav{height:72px;padding:0 clamp(20px,5vw,64px);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:rgba(245,243,239,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);z-index:10}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--green);letter-spacing:.12em}.brand img{width:36px;height:36px;border-radius:10px;object-fit:cover}.back{font-size:14px;color:var(--muted)}.hero{padding:86px clamp(20px,5vw,64px) 56px;background:radial-gradient(circle at 82% 0%,rgba(127,255,196,.18),transparent 38%),linear-gradient(135deg,#102d22,#1C3B2A);color:white}.hero-inner{max-width:1160px;margin:auto}.eyebrow{display:inline-flex;border:1px solid rgba(127,255,196,.25);background:rgba(127,255,196,.08);color:var(--mint);padding:7px 14px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700}.hero h1{font-size:clamp(42px,7vw,86px);line-height:.96;letter-spacing:-.055em;margin:26px 0 18px;max-width:900px}.hero p{font-size:clamp(18px,2vw,24px);color:rgba(255,255,255,.74);max-width:760px}.container{max-width:1160px;margin:auto;padding:70px clamp(20px,5vw,64px)}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}.card{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-12{grid-column:span 12}.section-title{font-size:38px;letter-spacing:-.04em;line-height:1.05;color:var(--green);margin-bottom:18px}.lead{font-size:18px;color:var(--muted);max-width:760px;margin-bottom:30px}.label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);font-weight:800;margin-bottom:12px}.card h3{font-size:22px;color:var(--green);margin-bottom:10px}.card p,.card li{color:#3a453f;font-size:15px}.list{display:grid;gap:10px;margin-top:12px}.pill-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.pill{padding:8px 13px;border-radius:999px;background:#edf4ef;border:1px solid rgba(28,59,42,.1);font-size:13px;color:var(--green);font-weight:600}.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px}.swatch{height:92px;border-radius:18px;padding:12px;color:white;display:flex;align-items:flex-end;font-size:12px;font-weight:700}.type-row{display:grid;gap:14px}.type-sample{padding:18px;border-radius:18px;background:#f7f3ea;border:1px solid var(--line)}.type-sample strong{display:block;color:var(--green);margin-bottom:6px}.do{border-left:4px solid #23a15a}.dont{border-left:4px solid #c74428}.footer{background:#0F1410;color:white;padding:34px clamp(20px,5vw,64px)}.footer-inner{max-width:1160px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}.footer .brand{color:white}.footer small{color:rgba(255,255,255,.45)}@media(max-width:820px){.span-4,.span-6{grid-column:span 12}.hero h1{font-size:44px}.footer-inner{flex-direction:column;align-items:flex-start}.swatches{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="nav"><a href="/" class="brand"><img src="/assets/kowo-logo-icon.jpg" alt="KOWO">KOWO</a><a class="back" href="/">Retour à l'accueil</a></nav>
+<section class="hero"><div class="hero-inner"><span class="eyebrow">Design System 1.0</span><h1>The trusted infrastructure for community finance.</h1><p>KOWO aide les communautés à organiser, gérer et sécuriser leur argent ensemble, grâce à une infrastructure claire, transparente et connectée à des partenaires financiers agréés.</p></div></section>
+<main class="container">
+<section class="grid">
+<div class="span-12"><h2 class="section-title">Positionnement</h2><p class="lead">KOWO n'est pas défini par un cas d'usage unique. La tontine, la caisse familiale, la cagnotte, l'association ou le club sont des usages. Le produit est l'infrastructure qui permet à plusieurs personnes d'organiser de l'argent ensemble.</p></div>
+<div class="card span-4"><div class="label">Promesse</div><h3>Organiser l'argent collectif</h3><p>Des règles, des contributions, des rôles, des validations, des flux et des preuves dans un espace unique.</p></div>
+<div class="card span-4"><div class="label">Confiance</div><h3>Ne pas porter les fonds</h3><p>KOWO fournit la couche logicielle. Les opérations financières doivent être exécutées par des partenaires agréés.</p></div>
+<div class="card span-4"><div class="label">Ambition</div><h3>Universel, pas géographique</h3><p>Le produit peut démarrer en Afrique, mais le problème est mondial : les communautés ont besoin d'outils fiables pour gérer l'argent ensemble.</p></div>
+</section>
+<section class="grid" style="margin-top:70px">
+<div class="span-12"><h2 class="section-title">Langage produit</h2><p class="lead">La règle est simple : éviter les mots qui enferment KOWO dans une pratique locale ou un seul marché. Utiliser un vocabulaire universel et rassurant.</p></div>
+<div class="card span-6 do"><div class="label">À utiliser</div><div class="pill-row"><span class="pill">Caisse familiale</span><span class="pill">Community Fund</span><span class="pill">Family Fund</span><span class="pill">Shared Project</span><span class="pill">Group Rules</span><span class="pill">Contributions</span><span class="pill">Milestones</span><span class="pill">Governance</span></div></div>
+<div class="card span-6 dont"><div class="label">À limiter</div><div class="pill-row"><span class="pill">Tontine comme identité</span><span class="pill">Application africaine</span><span class="pill">Épargne uniquement</span><span class="pill">Investissement garanti</span><span class="pill">Wallet KOWO si non agréé</span></div></div>
+</section>
+<section class="grid" style="margin-top:70px">
+<div class="span-12"><h2 class="section-title">Système visuel</h2></div>
+<div class="card span-6"><div class="label">Couleurs</div><p>Palette premium, calme et institutionnelle. Le vert porte la confiance, le doré la valeur, le crème la chaleur, le mint l'innovation.</p><div class="swatches"><div class="swatch" style="background:#1C3B2A">#1C3B2A</div><div class="swatch" style="background:#2D6147">#2D6147</div><div class="swatch" style="background:#B8860B">#B8860B</div><div class="swatch" style="background:#7FFFC4;color:#1C3B2A">#7FFFC4</div><div class="swatch" style="background:#F5F3EF;color:#1C3B2A">#F5F3EF</div></div></div>
+<div class="card span-6"><div class="label">Typographie</div><div class="type-row"><div class="type-sample"><strong>Hero</strong><span style="font-size:34px;font-weight:800;letter-spacing:-.05em;color:#1C3B2A">Community finance, organized.</span></div><div class="type-sample"><strong>Body</strong><span>Phrase courte, claire, jamais sur-vendue. On explique avant de promettre.</span></div></div></div>
+</section>
+<section class="grid" style="margin-top:70px">
+<div class="span-12"><h2 class="section-title">Règles de marque</h2></div>
+<div class="card span-4"><h3>Calme</h3><p>Pas de superlatifs inutiles. Le produit traite d'argent : le ton doit être stable et rassurant.</p></div>
+<div class="card span-4"><h3>Clair</h3><p>Chaque phrase doit expliquer qui fait quoi : utilisateur, communauté, KOWO, partenaire financier.</p></div>
+<div class="card span-4"><h3>Crédible</h3><p>Ne jamais promettre rendement, garantie, agrément ou détention de fonds si ce n'est pas juridiquement acquis.</p></div>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><a href="/" class="brand"><img src="/assets/kowo-logo-icon.jpg" alt="KOWO">KOWO</a><small>The trusted infrastructure for community finance.</small></div></footer>
+</body></html>
