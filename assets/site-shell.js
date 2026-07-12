@@ -5,7 +5,7 @@ if(shellNav&&!shellNav.querySelector('.global-language-switch')){
   const switcher=existingSwitcher||document.createElement('div');
   switcher.classList.add('global-language-switch');
   switcher.setAttribute('aria-label',shellLang==='en'?'Choose language':'Choisir la langue');
-  switcher.innerHTML=`<a href="/" lang="fr" ${shellLang==='fr'?'class="active" aria-current="page"':''}>FR</a><a href="/en.html" lang="en" ${shellLang==='en'?'class="active" aria-current="page"':''}>EN</a>`;
+  switcher.innerHTML=`<a href="/" lang="fr" ${shellLang==='fr'?'class="active" aria-current="page"':''}>FR</a><a href="/en/" lang="en" ${shellLang==='en'?'class="active" aria-current="page"':''}>EN</a>`;
   const menuButton=shellNav.querySelector('.hamb,.hamburger,.menu-button');
   shellNav.insertBefore(switcher,menuButton||null);
 }
