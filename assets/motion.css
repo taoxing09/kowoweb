@@ -1,0 +1,31 @@
+.final-cta{position:relative;isolation:isolate}.final-cta>div{position:relative;z-index:1}
+.mobile-language{padding:4px 8px 12px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.mobile-language>span{color:#77837c;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}.mobile-language .language-switch{display:flex}
+@media (prefers-reduced-motion:no-preference){
+  .device{animation:device-breathe 6s ease-in-out infinite}
+  .glass-left{animation:glass-drift-left 5.5s ease-in-out infinite}
+  .glass-right{animation:glass-drift-right 6.5s ease-in-out .7s infinite}
+  .stage-glow{animation:glow-pulse 7s ease-in-out infinite}
+  .progress i{transform-origin:left;animation:progress-in 1.4s .35s cubic-bezier(.2,.8,.2,1) both}
+  .cta-mark img{animation:mark-float 6s ease-in-out infinite}
+  .route{animation:route-breathe 6s ease-in-out infinite}
+  .city i{animation:city-pulse 2.6s ease-in-out infinite}
+  .city-cotonou i{animation-delay:.7s}.city-douala i{animation-delay:1.4s}
+  .bento-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,border-color .35s ease}
+  .bento-card:hover{transform:translateY(-7px);border-color:rgba(14,61,44,.12);box-shadow:0 30px 75px rgba(7,29,19,.09)}
+  .bento-card .card-top i{transition:transform .35s ease,background .35s ease}
+  .bento-card:hover .card-top i{transform:rotate(8deg) scale(1.06)}
+  .button span,.nav-download span,.section-heading>a span{display:inline-block;transition:transform .2s ease}
+  .button:hover span,.nav-download:hover span,.section-heading>a:hover span{transform:translate(3px,-2px)}
+  .final-cta:after{content:"";position:absolute;inset:-50% auto -50% -30%;width:24%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:cta-shine 8s ease-in-out infinite;pointer-events:none}
+}
+@keyframes device-breathe{0%,100%{transform:translateY(0) rotate(.2deg)}50%{transform:translateY(-9px) rotate(-.2deg)}}
+@keyframes glass-drift-left{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-4px,-9px,0)}}
+@keyframes glass-drift-right{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(5px,-7px,0)}}
+@keyframes glow-pulse{0%,100%{opacity:.72;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+@keyframes progress-in{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mark-float{0%,100%{transform:translateY(0) rotate(5deg)}50%{transform:translateY(-10px) rotate(3deg)}}
+@keyframes route-breathe{0%,100%{opacity:.52;transform:rotate(13deg) scale(.98)}50%{opacity:1;transform:rotate(13deg) scale(1.02)}}
+@keyframes city-pulse{0%,100%{box-shadow:0 0 0 6px rgba(141,255,211,.08)}50%{box-shadow:0 0 0 11px rgba(141,255,211,.02)}}
+@keyframes cta-shine{0%,65%{left:-30%;opacity:0}74%{opacity:1}90%,100%{left:115%;opacity:0}}
+@media(max-width:700px){.bento-card:hover{transform:none}.glass-card{animation:none}}
+@media(prefers-reduced-motion:reduce){.device,.glass-card,.stage-glow,.progress i,.cta-mark img,.route,.city i{animation:none!important}}
