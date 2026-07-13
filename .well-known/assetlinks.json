@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kowo.app",
+      "sha256_cert_fingerprints": [
+        "1C:8D:38:A3:BB:A0:0D:36:9C:E8:B7:97:C1:61:9F:04:38:37:BF:EA:88:D2:03:6F:C9:4D:92:81:07:1C:80:DC"
+      ]
+    }
+  }
+]
